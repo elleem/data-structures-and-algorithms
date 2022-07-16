@@ -16,7 +16,7 @@ const addOne = (arr) => {
     let newValue = num + 1; 
     //Push the new value into a local array
     localArr.push(newValue); 
-  })
+  });
   return localArr; 
 };
 
@@ -79,7 +79,7 @@ const speaker = (words, callback) => {
   words.forEach(function(string){
     //new array of strings, each string modified by the callback
     newArray.push(callback(string)); 
-  })
+  });
   //Return the new array.
   return newArray; 
 };
@@ -138,7 +138,7 @@ const createList = (availableItems) => {
     if (item.available){
       storeInventory.push(item.name); 
     }
-  })
+  });
   // Return the final list.
   return storeInventory; 
 };
