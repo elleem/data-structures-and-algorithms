@@ -32,9 +32,9 @@ const addExclamation = (arr) => {
   //add the updated value into a local array
   let newArray = []; 
   //Use `forEach` to loop over the input array
-  arr.forEach(function(element){
+  arr.forEach(function(string){
     //Modify each string, a new array of the same strings with an "!" added to the end
-    newArray.push (element + '!'); 
+    newArray.push (string + '!'); 
   }); 
   //Return the local array
   return newArray; 
@@ -51,9 +51,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 const allUpperCase = (arr) => {
   let newArray = []; 
   // Use `forEach` to loop over the input array
-  arr.forEach(function(element){
+  arr.forEach(function(string){
     // returns a new array of the strings converted to upper case
-    newArray.push(element.toUpperCase()); 
+    newArray.push(string.toUpperCase()); 
   });
   return newArray;
   //Return that local array
@@ -69,12 +69,19 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
 
-const greeting = (word) => {
-  // Solution code here...
-};
+//a single string and returns the string in all uppercase letters, and followed by an "!".
+const greeting = (word) => word.toUpperCase() + '!'; 
+ 
 
 const speaker = (words, callback) => {
-  // Solution code here...
+  //Use `forEach` to build a new array of strings
+  let newArray = []; 
+  words.forEach(function(string){
+    //new array of strings, each string modified by the callback
+    newArray.push(callback(string)); 
+  })
+  //Return the new array.
+  return newArray; 
 };
 
 /* ------------------------------------------------------------------------------------------------
