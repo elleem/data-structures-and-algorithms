@@ -99,13 +99,15 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-
-const addValues = (arr, value) => {
-  // Solution code here...
-};
+// pushes the value into the array (no return)
+const addValues = (arr, value) => arr.push(value);
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  // invoke the callback function as many times as necessary
+  //num < times
+  //calllback(arr,num)
+  //Return the modified array.
+  return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,7 +147,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let userEntry = []; 
+  arr.forEach(function(numbers){
+    if (numbers % 15 === 0){
+      userEntry.push("Fizz Buzz");
+    } else if (numbers % 3 === 0){
+      userEntry.push ("Fizz");
+    } else if (numbers % 5 === 0){
+      userEntry.push("Buzz");
+    } else {
+      userEntry.push(numbers); 
+    }
+  }); 
+  return userEntry; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -199,7 +213,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
