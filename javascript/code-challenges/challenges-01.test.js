@@ -103,11 +103,13 @@ Return the modified array.
 const addValues = (arr, value) => arr.push(value);
 
 const addNumbers = (num, arr, times, callback) => {
+  let returnArr = arr; 
   // invoke the callback function as many times as necessary
-  //num < times
-  //calllback(arr,num)
+  for (let i = 0; i < times; i++){
+    callback(returnArr, num)
+  }
   //Return the modified array.
-  return arr; 
+  return returnArr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,7 +131,16 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let storeInventory = []; 
+  // use forEach to populate your grocery list based on the store's inventory
+  availableItems.forEach (function(item){
+    // If the item is available, add it to your list
+    if (item.available){
+      storeInventory.push(item.name); 
+    }
+  })
+  // Return the final list.
+  return storeInventory; 
 };
 
 /* ------------------------------------------------------------------------------------------------
