@@ -13,11 +13,11 @@ const addOne = (arr) => {
   // Use `forEach` to loop over the input array
   arr.forEach(num =>{
     //incremented by 1
-    let newValue = num + 1; 
+    let newValue = num + 1;
     //Push the new value into a local array
-    localArr.push(newValue); 
+    localArr.push(newValue);
   });
-  return localArr; 
+  return localArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -30,14 +30,14 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   //add the updated value into a local array
-  let newArray = []; 
+  let newArray = [];
   //Use `forEach` to loop over the input array
   arr.forEach(function(string){
     //Modify each string, a new array of the same strings with an "!" added to the end
-    newArray.push (string + '!'); 
-  }); 
+    newArray.push (string + '!');
+  });
   //Return the local array
-  return newArray; 
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,11 +49,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  let newArray = []; 
+  let newArray = [];
   // Use `forEach` to loop over the input array
   arr.forEach(function(string){
     // returns a new array of the strings converted to upper case
-    newArray.push(string.toUpperCase()); 
+    newArray.push(string.toUpperCase());
   });
   return newArray;
   //Return that local array
@@ -70,18 +70,18 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 //a single string and returns the string in all uppercase letters, and followed by an "!".
-const greeting = (word) => word.toUpperCase() + '!'; 
+const greeting = (word) => word.toUpperCase() + '!';
  
 
 const speaker = (words, callback) => {
   //Use `forEach` to build a new array of strings
-  let newArray = []; 
+  let newArray = [];
   words.forEach(function(string){
     //new array of strings, each string modified by the callback
-    newArray.push(callback(string)); 
+    newArray.push(callback(string));
   });
   //Return the new array.
-  return newArray; 
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,13 +103,13 @@ Return the modified array.
 const addValues = (arr, value) => arr.push(value);
 
 const addNumbers = (num, arr, times, callback) => {
-  let returnArr = arr; 
+  let returnArr = arr;
   // invoke the callback function as many times as necessary
   for (let i = 0; i < times; i++){
-    callback(returnArr, num)
+    callback(returnArr, num);
   }
   //Return the modified array.
-  return returnArr; 
+  return returnArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -131,16 +131,16 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  let storeInventory = []; 
+  let storeInventory = [];
   // use forEach to populate your grocery list based on the store's inventory
   availableItems.forEach (function(item){
     // If the item is available, add it to your list
     if (item.available){
-      storeInventory.push(item.name); 
+      storeInventory.push(item.name);
     }
   });
   // Return the final list.
-  return storeInventory; 
+  return storeInventory;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,19 +158,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  let userEntry = []; 
+  let userEntry = [];
   arr.forEach(function(numbers){
     if (numbers % 15 === 0){
-      userEntry.push("Fizz Buzz");
+      userEntry.push('Fizz Buzz');
     } else if (numbers % 3 === 0){
-      userEntry.push ("Fizz");
+      userEntry.push ('Fizz');
     } else if (numbers % 5 === 0){
-      userEntry.push("Buzz");
+      userEntry.push('Buzz');
     } else {
-      userEntry.push(numbers); 
+      userEntry.push(numbers);
     }
-  }); 
-  return userEntry; 
+  });
+  return userEntry;
 };
 
 /* ------------------------------------------------------------------------------------------------
