@@ -93,7 +93,11 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  let squared = [];
+  arr.map(function (number) {
+    squared.push(Math.pow(2, number));
+  });
+  return squared;
 };
 
 /* ------------------------------------------------------------------------------------------------
