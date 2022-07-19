@@ -238,10 +238,10 @@ const snorlaxStats = {
 const extractStats = (arr) => {
   // uses map to return an array of objects containing the stat name and the total.
   //The total should be the sum of the effort and the baseStat.
-  let abilities = arr.map(function(able) {
-    return able.ability.name;
+  let values = arr.map(function(poke) {
+    return ({name: poke.stat.name, total: poke.effort + poke.baseStat});
   });
-  return abilities;
+  return values;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -371,7 +371,7 @@ describe("Testing challenge 8", () => {
   });
 });
 
-xdescribe("Testing challenge 9", () => {
+describe("Testing challenge 9", () => {
   test("It should return an array containing only the ability names", () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual([
       "gluttony",
@@ -384,7 +384,7 @@ xdescribe("Testing challenge 9", () => {
   });
 });
 
-xdescribe("Testing challenge 10", () => {
+describe("Testing challenge 10", () => {
   test("It should return an array containing objects with name and total values", () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
       { name: "speed", total: 35 },
