@@ -78,7 +78,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  //  refactor 4 using forEach instead of a for loop.
+  let squared = [];
+  arr.forEach(function(number){
+    squared.push(Math.pow(2, number));
+  });
+  return squared;
 };
 
 /* ------------------------------------------------------------------------------------------------
