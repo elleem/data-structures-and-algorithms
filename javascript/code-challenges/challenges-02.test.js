@@ -25,7 +25,12 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  // Solution code here...
+  // uses map to return a new array with each value
+  let increments = arr.map(function(n){
+    //simply incremented by 1
+    return n + 1;
+  });
+  return increments;
 };
 
 /* ------------------------------------------------------------------------------------------------
