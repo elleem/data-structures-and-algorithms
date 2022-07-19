@@ -130,7 +130,16 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+  let newArr = arr.map(function(n){
+    if (isNaN(n)) {
+      return 'N/A';
+    } else if(n % 2 === 0){
+      return 'even';
+    } else return'odd';
+  });
+  return newArr;
+  // return a new array where each element is either the string "even" or the string "odd", based on each value.
+  //not a number returns N/A
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -176,7 +185,11 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
+  // use map to write an array with only the abilities name
+  let abilities = arr.map(function(able) {
+    return able.ability.name;
+  });
+  return abilities;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -223,7 +236,12 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
+  // uses map to return an array of objects containing the stat name and the total.
+  //The total should be the sum of the effort and the baseStat.
+  let abilities = arr.map(function(able) {
+    return able.ability.name;
+  });
+  return abilities;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -305,7 +323,7 @@ describe("Testing challenge 7", () => {
   });
 });
 
-xdescribe("Testing challenge 8", () => {
+describe("Testing challenge 8", () => {
   test("It should return an array containing the keys from an object", () => {
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual([
       "odd",
