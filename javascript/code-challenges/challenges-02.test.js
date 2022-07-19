@@ -80,7 +80,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 const forEachTwoToThe = (arr) => {
   //  refactor 4 using forEach instead of a for loop.
   let squared = [];
-  arr.forEach(function(number){
+  arr.forEach(function (number) {
     squared.push(Math.pow(2, number));
   });
   return squared;
@@ -93,6 +93,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
+  //  refactor 4 using map instead of a forEach.
   let squared = [];
   arr.map(function (number) {
     squared.push(Math.pow(2, number));
@@ -111,9 +112,13 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  // Solution code here...
+  // uses map to return a new array
+  //uses map to return a new array where each element is the result of the `charCodeAt` method on the original array element
+  let code = arr.map(function (string) {
+    return string.charCodeAt(0);
+  });
+  return code;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
@@ -289,7 +294,7 @@ describe("Testing challenge 6", () => {
   });
 });
 
-xdescribe("Testing challenge 7", () => {
+describe("Testing challenge 7", () => {
   test("It should return an array containing the character code for each letter", () => {
     expect(charCode(["C", "o", "d", "e", "3", "0", "1"])).toStrictEqual([
       67, 111, 100, 101, 51, 48, 49,
