@@ -127,6 +127,7 @@ Write a function that, given an array of numbers as input, uses map to return a 
 If any element in the array is not a number, the resulting array should have the string "N/A" in its place.
 
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
+//typeOf would work too, bang is the !, returns a string
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
