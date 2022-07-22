@@ -131,7 +131,7 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 //clearly I am mining stackoverflow to help myself and I found flatMap from https://stackoverflow.com/questions/34398279/map-and-filter-an-array-at-the-same-time
 const getStatName = (arr, minBaseStat) => {
   // return the name of the stat, rather than the entire stat object.
-  let newArr = arr.filter (n => n.baseStat>minBaseStat).flatMap(n => n.stat.name);
+  let newArr = arr.filter (n => n.baseStat>minBaseStat).map(n => n.stat.name);
   return newArr;
 };
 
