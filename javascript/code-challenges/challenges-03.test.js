@@ -7,9 +7,16 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  // takes in an array and adds two to every value
+  //Place the new value in a new array
+  let newArr = [];
   //using a for loop
-  //Place the new value in a new array and return
+  for (let i = 0; i <arr.length; i++) {
+    // takes in an array and adds two to every value
+    let n = arr[i];
+    n = n +2;
+    newArr.push(n);
+  }
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
