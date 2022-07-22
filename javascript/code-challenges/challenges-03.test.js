@@ -115,7 +115,10 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
+  // given the snorlaxData, below, and an integer as input
+  //uses filter to return an array containing all stats with a baseStat greater than the integer.
+  let newArr = arr.filter(n => n.baseStat>minBaseStat);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,9 +128,11 @@ Write a function named getStatName that is an extension of your getBaseStatGreat
 
 For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------ */
-
+//clearly I am mining stackoverflow to help myself and I found flatMap from https://stackoverflow.com/questions/34398279/map-and-filter-an-array-at-the-same-time
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  // return the name of the stat, rather than the entire stat object.
+  let newArr = arr.filter (n => n.baseStat>minBaseStat).flatMap(n => n.stat.name);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -180,7 +185,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  // uses filter to return an array of all characters without children
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -263,7 +268,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return an array containing the stats that are greater than the input', () => {
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75)).toStrictEqual([ { stat: { url: 'https://pokeapi.co/api/v2/stat/5/', name: 'special-defense' }, effort: 2, baseStat: 110 } ]);
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75).length).toStrictEqual(1);
@@ -274,7 +279,7 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the name of the stats that exceed that maximum', () => {
     expect(getStatName(snorlaxData.stats, 50)).toStrictEqual([ 'special-defense', 'special-attack' ]);
     expect(getStatName(snorlaxData.stats, 50).length).toStrictEqual(2);
@@ -295,14 +300,14 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing characters who do not have children', () => {
     expect(getCharactersWithoutChildren(characters)).toStrictEqual([ { name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' } ]);
     expect(getCharactersWithoutChildren(characters).length).toStrictEqual(2);
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should remove non-integers and return "even" or "odd', () => {
     expect(evenOddNumericValues(['Gregor', 2, 4, 1])).toStrictEqual(['even', 'even', 'odd']);
     expect(evenOddNumericValues(['Gregor', 2, 4, 1]).length).toStrictEqual(3);
