@@ -181,6 +181,7 @@ const people = [
 
 const sortPeople = (arr) => {
   // a, b each of which has firstName, lastName, and age properties, and sorts those people by their last names.
+//copy and paste directly from my solution on 7!
   return arr.sort((a,b) =>{
     if (a.lastName < b.lastName){
       return -1;
@@ -202,18 +203,21 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   return arr.sort((a,b) =>{
+    //sort by lastname
     if (a.lastName < b.lastName){
       return -1;
     } if (a.lastName > b.lastName){
       return 1;
+      //sort by firstname
     } if (a.firstName < b.firstName){
       return -1;
     } if (a.firstName > b.firstName){
       return 1;
-     } if (a.age < b.age){
-        return -1;
-      } if (a.age > b.age){
-        return 1;
+      //sort by age
+    } if (a.age < b.age){
+      return -1;
+    } if (a.age > b.age){
+      return 1;
     } return 0;
   });
 };
@@ -240,8 +244,13 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
+var week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
+  // Sort the meetings by the day on which they happen, Monday-Friday, only the day matters
+  return arr.sort((a,b) =>{
+    return week.indexOf(a.dayOfWeek) - week.indexOf(b.dayOfWeek);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
