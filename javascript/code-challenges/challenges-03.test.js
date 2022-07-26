@@ -187,6 +187,9 @@ const characters = [
 const getCharactersWithoutChildren = (arr) => {
   let newArr = arr.filter(character => character.children ?null:character.name );
   // uses filter to return an array of all characters without children
+  //can character.children be coerced to truthy or falsy, truthy for the children, false for those without children
+  //empty array is truthy
+  //return arr.filter(character=>!character.children); 
   return newArr;
 
 };
