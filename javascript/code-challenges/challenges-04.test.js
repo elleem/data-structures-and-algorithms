@@ -28,7 +28,7 @@ const updateAnimal = (arr, callback) => {
   //Then iterate over the input array
   for (let i=0; i < arr.length; i++)
   //push and modify each value based on the callback function provided.
-   newArr.push(callback(arr[i]));
+  newArr.push(callback(arr[i]));
   //return
   return newArr;
 
@@ -43,7 +43,10 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  // Solution code here...
+  let newArr = arr.sort();
+  // sorts them alphabetically
+  //Capital letters should come before lowercase letters
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +58,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  // Solution code here...
+  // sorts them from smallest to largest
 };
 
 /* ------------------------------------------------------------------------------------------------
