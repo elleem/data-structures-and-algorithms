@@ -59,7 +59,9 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // sorts them from smallest to largest
-};
+  return arr.sort((a,b)=> {
+  return a-b}
+)};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
