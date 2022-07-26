@@ -185,7 +185,13 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
+  let newArr = arr.filter(character => character.children ?null:character.name );
   // uses filter to return an array of all characters without children
+  //can character.children be coerced to truthy or falsy, truthy for the children, false for those without children
+  //empty array is truthy
+  //return arr.filter(character=>!character.children); 
+  return newArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -197,7 +203,10 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+  let newArr = arr.filter(n => typeof n === 'number').map(n => (n % 2===0) ?'even':'odd');
+  // // uses filter to remove any non-numeric values
+  // //then uses map to generate a new array containing the string 'even' or 'odd', depending on the original value
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
