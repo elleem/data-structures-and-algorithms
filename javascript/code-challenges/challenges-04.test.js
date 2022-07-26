@@ -73,6 +73,7 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 
 const sortBackwards = (arr) => {
   // sort from largest to smallest
+  //const sorted = numbers.sort((a, b) => a - b); minus coming into this because of the mdn documentation
   return arr.sort((a,b)=> {
     return b-a}
 )};
@@ -106,7 +107,11 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  // each of which has a 'price' property, and sorts those objects by price, lowest to highest, returning the same array.
+  //again mdn documentation using minus and so I am too
+  return arr.sort((a,b)=>{
+    return a.price - b.price;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +123,16 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  // with the strings sorted alphabetically.
+  return arr.sort((a,b)=>{
+    const nameA = a.toUpperCase();
+    const nameB = b.toUpperCase();
+    if (nameA < nameB){
+      return -1;
+    } if (nameA > nameB){
+      return 1;
+    } return 0;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -289,7 +303,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should alphabetize without regard to capitalization', () => {
     expect(alphabetizeBetter(['Alice', 'apple', 'alert', 'Average'])).toStrictEqual([ 'alert', 'Alice', 'apple', 'Average' ]);
     const ans = alphabetizeBetter(['alphabet', 'Zebra', 'Alphabet', 'carrot']);
