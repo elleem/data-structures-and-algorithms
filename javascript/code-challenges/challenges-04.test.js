@@ -60,7 +60,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 const sortNumbers = (arr) => {
   // sorts them from smallest to largest
   return arr.sort((a,b)=> {
-  return a-b}
+    return a-b}
 )};
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,7 +88,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  // returns the same array with the strings sorted alphabetically
+  return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
