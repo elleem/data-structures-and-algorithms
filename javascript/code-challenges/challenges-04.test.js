@@ -248,6 +248,7 @@ var week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 const sortMeetingsByDay = (arr) => {
   // Sort the meetings by the day on which they happen, Monday-Friday, only the day matters
+  //sourced from https://stackoverflow.com/questions/36083827/sorting-object-sunday-to-saturday-in-javascript
   return arr.sort((a,b) =>{
     return week.indexOf(a.dayOfWeek) - week.indexOf(b.dayOfWeek);
   });
@@ -265,6 +266,15 @@ You DO NOT need to use your solution to Challenge 12 in completing Challenge 13.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  return arr.sort((a,b) =>{
+    if (parseInt(a.start) < parseInt(b.start)){
+      return -1;
+    } if (parseInt(b.start) < parseInt(a.start)){
+      return 1;
+      //sort by
+    } if (parseInt(a.start) === parseInt(b.start))
+     return 0;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
