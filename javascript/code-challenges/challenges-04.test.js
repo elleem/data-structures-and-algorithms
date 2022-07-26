@@ -72,8 +72,10 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
-};
+  // sort from largest to smallest
+  return arr.sort((a,b)=> {
+    return b-a}
+)};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
