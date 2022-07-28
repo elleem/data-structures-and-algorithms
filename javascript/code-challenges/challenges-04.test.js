@@ -14,7 +14,6 @@ HINT: Look at the tests to see how the callback functions are used.
 ------------------------------------------------------------------------------------------------ */
 
 function upper(str) {
-  //default is usually the best option
   return str.toUpperCase();
 }
 
@@ -23,14 +22,14 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  //create new arr
-  const newArr= [];
-  //Then iterate over the input array
-  for (let i=0; i < arr.length; i++)
-  //push and modify each value based on the callback function provided.
-  newArr.push(callback(arr[i]));
-  //return
-  return newArr;
+    //create new arr
+    const newArr= [];
+    //Then iterate over the input array
+    for (let i=0; i < arr.length; i++)
+    //push and modify each value based on the callback function provided.
+    newArr.push(callback(arr[i]));
+    //return
+    return newArr;
 
 };
 
@@ -60,8 +59,8 @@ HINT: Beware... JS default is "Lexical" ordering.
 const sortNumbers = (arr) => {
   // sorts them from smallest to largest
   return arr.sort((a,b)=> {
-    return a-b}
-)};
+    return a-b});
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -75,8 +74,8 @@ const sortBackwards = (arr) => {
   // sort from largest to smallest
   //const sorted = numbers.sort((a, b) => a - b); minus coming into this because of the mdn documentation
   return arr.sort((a,b)=> {
-    return b-a}
-)};
+    return b-a});
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -89,7 +88,6 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // returns the same array with the strings sorted alphabetically
   return arr.sort();
 };
 
@@ -157,10 +155,11 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // numbers and sorts those numbers by their length.
+// numbers and sorts those numbers by their length.
+//source for this solution https://www.codegrepper.com/code-examples/javascript/convert+decimal+to+string+in+javascript
   return arr.sort((a,b) => {
-    return a.toString.length- b.toString.length;
-}
+    return a.toString().length- b.toString().length});
+};
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -181,7 +180,15 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-   //each of which has firstName, lastName, and age properties, and sorts those people by their last names.
+  // a, b each of which has firstName, lastName, and age properties, and sorts those people by their last names.
+//copy and paste directly from my solution on 7!
+  return arr.sort((a,b) =>{
+    if (a.lastName < b.lastName){
+      return -1;
+    } if (a.lastName > b.lastName){
+      return 1;
+    } return 0;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -195,7 +202,24 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  return arr.sort((a,b) =>{
+    //sort by lastname
+    if (a.lastName < b.lastName){
+      return -1;
+    } if (a.lastName > b.lastName){
+      return 1;
+      //sort by firstname
+    } if (a.firstName < b.firstName){
+      return -1;
+    } if (a.firstName > b.firstName){
+      return 1;
+      //sort by age
+    } if (a.age < b.age){
+      return -1;
+    } if (a.age > b.age){
+      return 1;
+    } return 0;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -220,8 +244,14 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
+var week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
+  // Sort the meetings by the day on which they happen, Monday-Friday, only the day matters
+  //sourced from https://stackoverflow.com/questions/36083827/sorting-object-sunday-to-saturday-in-javascript
+  return arr.sort((a,b) =>{
+    return week.indexOf(a.dayOfWeek) - week.indexOf(b.dayOfWeek);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -236,7 +266,31 @@ You DO NOT need to use your solution to Challenge 12 in completing Challenge 13.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  return arr.sort((a,b) =>{
+    let aDay= week.indexOf(a.dayOfWeek),
+      bDay = week.indexOf(b.dayOfWeek),
+      aStart = parseInt(a.start),
+      bStart = parseInt(b.start),
+      aDur = parseInt(a.end)- parseInt(a.start),
+      bDur = parseInt(b.end) - parseInt(b.start);
+    if (aStart === bStart&& aDur===bDur && aDay=== bDay){
+      return 0;
+    } if (aDur < bDur){
+      return -1;
+    } if (aDur > bDur){
+      return 1;
+    } if (aStart < bStart){
+      return -1;
+    } if (aStart > bStart){
+      return 1;
+    } if (aDay < bDay){
+      return -1;
+    } if (aDay > bDay){
+      return 1;
+    }
+  });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -348,7 +402,7 @@ describe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [
       new Person('Casey', 'Codefellows', 55),
@@ -369,7 +423,7 @@ xdescribe('Testing challenge 11', () => {
   });
 });
 
-xdescribe('Testing challenge 12', () => {
+describe('Testing challenge 12', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
@@ -379,7 +433,7 @@ xdescribe('Testing challenge 12', () => {
   });
 });
 
-xdescribe('Testing challenge 13', () => {
+describe('Testing challenge 13', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
