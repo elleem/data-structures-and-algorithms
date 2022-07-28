@@ -267,15 +267,30 @@ You DO NOT need to use your solution to Challenge 12 in completing Challenge 13.
 const sortSchedule = (arr) => {
   // Solution code here...
   return arr.sort((a,b) =>{
-    if (parseInt(a.start) < parseInt(b.start)){
+    let aDay= day.indexOf(a.dayOfWeek),
+      bDay = day.indexOf(b.dayOfWeek),
+      aStart = parseInt(a.start),
+      bStart = parseInt(b.start),
+      aDur = parseInt(a.end)- parseInt(a.start),
+      bDur = parseInt(b.end) - parseInt(b.start);
+    if (aStart === bStart&& aDur===bDur && aDay=== bDay){
+      return 0;
+    } if (aDur < bDur){
       return -1;
-    } if (parseInt(b.start) < parseInt(a.start)){
+    } if (aDur > bDur){
       return 1;
-      //sort by
-    } if (parseInt(a.start) === parseInt(b.start))
-     return 0;
+    } if (aStart < bStart){
+      return -1;
+    } if (aStart > bStart){
+      return 1;
+    } if (aDay < bDay){
+      return -1;
+    } if (aDay > bDay){
+      return 1;
+    }
   });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
