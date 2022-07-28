@@ -267,8 +267,8 @@ You DO NOT need to use your solution to Challenge 12 in completing Challenge 13.
 const sortSchedule = (arr) => {
   // Solution code here...
   return arr.sort((a,b) =>{
-    let aDay= day.indexOf(a.dayOfWeek),
-      bDay = day.indexOf(b.dayOfWeek),
+    let aDay= week.indexOf(a.dayOfWeek),
+      bDay = week.indexOf(b.dayOfWeek),
       aStart = parseInt(a.start),
       bStart = parseInt(b.start),
       aDur = parseInt(a.end)- parseInt(a.start),
