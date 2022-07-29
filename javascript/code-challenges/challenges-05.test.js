@@ -144,7 +144,9 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // using reduce return a string with the letters in reverse order.
-  return str.split("").reduce((s1,s2)=>s2+s1, "");
+  return str.split("").reduce((s1,s2)=>{
+    return s2+s1;
+  },"");
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -197,7 +199,10 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  // uses reduce to return the total number of children in the data set
+  return arr.map(character =>
+    {return character.children ?character.children.length:0}).reduce((acc,val)=>
+    {return acc+val});
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -344,7 +349,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
