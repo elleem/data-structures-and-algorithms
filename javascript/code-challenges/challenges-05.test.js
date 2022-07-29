@@ -239,7 +239,7 @@ const isPrime = (value) => {
 const countPrimeNumbers = (arr) => {
   // reduce to count the number of elements that are prime numbers
   return arr.reduce((acc,val)=>{
-    return acc += (isPrime(val)?1:0); 
+    return acc += (isPrime(val)?1:0);
   },0);
 };
 
@@ -283,7 +283,8 @@ const snorlaxData = {
 };
 
 const extractStat = (statName, arr) => {
-  // Solution code here...
+  // reduce to return the object whose 'name' property matches the given string.
+  return arr.reduce((acc)=>{return(acc.stat.name===statName)?acc:null});
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -372,7 +373,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return any stats that match the input', () => {
     expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
   });
