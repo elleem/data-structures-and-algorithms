@@ -266,31 +266,34 @@ You DO NOT need to use your solution to Challenge 12 in completing Challenge 13.
 
 const sortSchedule = (arr) => {
   // Solution code here...
-  return arr.sort((a,b) =>{
-    let aDay= week.indexOf(a.dayOfWeek),
-      bDay = week.indexOf(b.dayOfWeek),
-      aStart = parseInt(a.start),
-      bStart = parseInt(b.start),
-      aDur = parseInt(a.end)- parseInt(a.start),
-      bDur = parseInt(b.end) - parseInt(b.start);
-    if (aStart === bStart&& aDur===bDur && aDay=== bDay){
-      return 0;
-    } if (aDur < bDur){
-      return -1;
-    } if (aDur > bDur){
-      return 1;
-    } if (aStart < bStart){
-      return -1;
-    } if (aStart > bStart){
-      return 1;
-    } if (aDay < bDay){
-      return -1;
-    } if (aDay > bDay){
-      return 1;
-    }
-  });
-};
-
+  const daysOfWeek= {
+    Monday: 0,
+    Tuesday: 1,
+    Wednesday: 2,
+    Thursday: 3,
+    Friday: 4
+  };
+  return arr.sort((a,b) =>(daysOfWeek[a.dayOfWeek]-daysOfWeek[b.dayOfWeek])|| (a.start< b.start?-1:0)||(a.end >b.end? 1:(a.end<b.end?-1:0)))};
+  //   let aDay= week.indexOf(a.dayOfWeek),
+  //     bDay = week.indexOf(b.dayOfWeek),
+  //     aStart = parseInt(a.start),
+  //     bStart = parseInt(b.start),
+  //     aDur = parseInt(a.end)- parseInt(a.start),
+  //     bDur = parseInt(b.end) - parseInt(b.start);
+  //   if (aStart === bStart&& aDur===bDur && aDay=== bDay){
+  //     return 0;
+  //   } if (aDur < bDur){
+  //     return -1;
+  //   } if (aDur > bDur){
+  //     return 1;
+  //   } if (aStart < bStart){
+  //     return -1;
+  //   } if (aStart > bStart){
+  //     return 1;
+  //   } if (aDay < bDay){
+  //     return -1;
+  //   } if (aDay > bDay){
+// ?
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -433,7 +436,7 @@ describe('Testing challenge 12', () => {
   });
 });
 
-xdescribe('Testing challenge 13', () => {
+describe('Testing challenge 13', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
