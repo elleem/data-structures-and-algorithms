@@ -143,7 +143,8 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  // using reduce return a string with the letters in reverse order.
+  return str.split("").reduce((s1,s2)=>s2+s1, "");
 };
 
 /* ------------------------------------------------------------------------------------------------
