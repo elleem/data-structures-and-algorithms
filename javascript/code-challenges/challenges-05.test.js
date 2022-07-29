@@ -298,7 +298,14 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+  // filter for children with a
+  //reduce for an array of all the children's names
+  let filteredNames = names.filter(word=>{
+    return word.character[]; 
+  })
+  return arr.filter(word=>{
+
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
