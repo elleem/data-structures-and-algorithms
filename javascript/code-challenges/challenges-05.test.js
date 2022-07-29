@@ -1,5 +1,7 @@
 'use strict';
 
+const { val } = require("cheerio/lib/api/attributes");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -24,7 +26,11 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  // Solution code here...
+  // uses reduce to add the values in the array
+  let newArr =arr.reduce((acc,val)=>{
+    return acc +val;
+  },0);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
