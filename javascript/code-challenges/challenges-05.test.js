@@ -298,14 +298,16 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // filter for children with a
+  // filter for characters with a
   //reduce for an array of all the children's names
-  let filteredNames = names.filter(word=>{
-    return word.character[]; 
-  })
-  return arr.filter(word=>{
-
-  });
+  //filter returns an array, therefore able to run reduce
+  // notes courtesy of code review in 301 nights
+  return arr.filter (o=> o.name.search("a")=== -1 ? false : true).reduce((acc,curr)=>{
+    if (curr.children) {
+      curr.children.filter(child=> acc.push(child))
+    }
+    return acc;
+  }, [])
 };
 
 /* ------------------------------------------------------------------------------------------------
