@@ -60,7 +60,8 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  // accepts an array and copies the first element to the end of the array
+  arr.push(arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
