@@ -93,7 +93,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  // returns a new array where every element is a character of the input string.
   return arr.split('');
 };
 
@@ -141,7 +141,16 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  // you only want a list of the item names.
+  //returns a new array of the food items without any amount or units
+  //Use slice for this function, maybe more than once
+  //Array.indexOf() method may also be helpful
+  //Do not use split for this function.
+  recipe.ingredients.forEach(e=> {
+    let i = e.indexOf(' ',3);
+    let ingredient =e.slice(i + 1, e.length);
+    result.push(ingredient);
+  });
   return result;
 };
 
