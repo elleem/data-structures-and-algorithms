@@ -57,7 +57,8 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  // Solution code here...
+  // takes an array and joins all of the elements together in one string on a space
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
