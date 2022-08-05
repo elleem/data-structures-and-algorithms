@@ -26,6 +26,16 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // sorts the characters in the starWarsPeople array by height from tallest to shortest.
+  starWarsArr.sort((personA,personB)=>{
+    if(parseInt(personA.height)>parseInt(personB.height)){
+      return -1;
+    } else if (parseInt(personA.height)===parseInt(personB.height)){
+      return 0;
+    } else{
+      return 1;
+    }
+  });
+  return starWarsArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +47,7 @@ Write a function named removeThree that takes an index and an array. The functio
 const removeThree = (idx, arr) => {
   // removes three items in the array starting with the value at the index.
   arr.splice(idx,3);
-  return arr; 
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
