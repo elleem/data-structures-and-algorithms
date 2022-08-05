@@ -78,6 +78,7 @@ const howMuchPencil = (str) => {
   let result = [];
   // slice within a loop
   for(let i = 0; i <= str.length; i++){
+    //return an array of each successive string result
     result.push(str.slice(i));
   }
   return result;
@@ -93,6 +94,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
