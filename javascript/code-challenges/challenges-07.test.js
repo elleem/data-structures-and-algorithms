@@ -148,7 +148,7 @@ const listFoods = (recipe) => {
   //Do not use split for this function.
   recipe.ingredients.forEach(e=> {
     let i = e.indexOf(' ',3);
-    let ingredient =e.slice(i + 1, e.length);
+    let ingredient = e.slice(i + 1, e.length);
     result.push(ingredient);
   });
   return result;
@@ -164,7 +164,11 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  // uses split
+  // recipe.ingredients.forEach(e=>{
+  //   let i = e.indexOf(' ',3);
+  // })
+  // split(2);
   return result;
 };
 
