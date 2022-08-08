@@ -175,11 +175,11 @@ Write a function named stepAction that takes in the recipe and extracts the acti
 Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
 ------------------------------------------------------------------------------------------------ */
 
-const stepActions = (recipe) => {
-  let result = [];
-  // Solution code here...
-  return result;
-};
+const stepActions = (recipe) => recipe.steps.map((e)=> e.split(' ')[0]);
+//   let result = [];
+//   // returns after the space, tell it where to start, which is zero
+//   return result;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -318,7 +318,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return a list of recipe steps', () => {
     expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
     expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
