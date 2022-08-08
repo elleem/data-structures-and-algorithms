@@ -201,7 +201,7 @@ const removeEvenValues = (arr) => {
     //The array should be modified in-place.
     arr.pop();
   }
-  arr.forEach((num, i)=> {
+  arr.forEach((num,i)=> {
     arr[i] = newArr[i];
   });
 };
@@ -222,7 +222,16 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  // greater than the length of the input string, the function should return an empty string.
+  //negative number, the function should return the input string without any changes.
+  //numberOfCharacters determines how many characters will be removed from the end of the string and returned.
+  if (numberOfCharacters >str.length){
+    return '';
+  } else if (numberOfCharacters < 0){
+    return str;
+  } else {
+    return str.slice (0, str.length - numberOfCharacters);
+  }
 };
 
 
@@ -378,7 +387,7 @@ describe('Testing challenge 12', () => {
   });
 });
 
-xdescribe('Testing challenge 13', () => {
+describe('Testing challenge 13', () => {
   test('It should return the string without vowels', () => {
     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
     expect(extractVowels('gregor').length).toStrictEqual(2);
