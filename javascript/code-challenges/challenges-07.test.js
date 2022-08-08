@@ -1,5 +1,7 @@
 'use strict';
 
+const { slice } = require("cheerio/lib/api/traversing");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -26,16 +28,8 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // sorts the characters in the starWarsPeople array by height from tallest to shortest.
-  starWarsArr.sort((personA,personB)=>{
-    if(parseInt(personA.height)>parseInt(personB.height)){
-      return -1;
-    } else if (parseInt(personA.height)===parseInt(personB.height)){
-      return 0;
-    } else{
-      return 1;
-    }
-  });
-  return starWarsArr;
+  return starWarsArr.sort((personA,personB)=>
+    personB.height - personA.height);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,15 +156,14 @@ Write a function named splitFoods that uses split to produce the same output as 
 You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
-const splitFoods = (recipe) => {
-  let result = [];
+const splitFoods = (recipe) =>recipe.ingredients.map((e)=>e.split(' ').slice(2).join(' '));
+  //let result = [];
   // uses split
-  // recipe.ingredients.forEach(e=>{
-  //   let i = e.indexOf(' ',3);
-  // })
-  // split(2);
-  return result;
-};
+
+
+  //return result;
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -319,7 +312,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
