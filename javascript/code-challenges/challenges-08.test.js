@@ -93,7 +93,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  // return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
+  return /world/.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
