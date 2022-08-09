@@ -273,11 +273,30 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = (str) => {
+//   const removeLetters = [];
+//   let noVowels = str.split('');
+//   // const vowels = ['A', 'I', 'E','O','U', 'a', 'i','e','o','u'];
+//   const vowels = 'aieouAIEOU'.split('');
+//   for (let i = 0; i< noVowels.length; i++){
+//     if (vowels.includes( noVowels[i])){
+//       let letter = noVowels.splice(i,1);
+//       removeLetters.push(letter);
+//       i--;
+//     }
+//   }
+//   removeLetters.sort();
+//   return [noVowels.join(''), removeLetters.join('')];
+// };
+
   // string of all the vowels that were removed, in alphabetical order.
-  const vowels = str.match(/[aeiou]/gi).sort();
-  const consonants = str.match(/[^aeiou]/gi);
-  consonants.concat([''], vowels).sort(k => {
-    return k; });
+  let consonants = [];
+  let vowels = [];
+  str.split('').forEach((e)=> /[aieou]/.test(e) ?vowels.push(e) : consonants.push(e));
+  vowels.sort();
+  let arr = [];
+  arr.push(consonants.join(''));
+  arr.push(vowels.join(''));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -393,7 +412,7 @@ describe('Testing challenge 12', () => {
   });
 });
 
-xdescribe('Testing challenge 13', () => {
+describe('Testing challenge 13', () => {
   test('It should return the string without vowels', () => {
     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
     expect(extractVowels('gregor').length).toStrictEqual(2);
