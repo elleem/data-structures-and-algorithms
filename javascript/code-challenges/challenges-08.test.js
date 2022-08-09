@@ -81,7 +81,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  // return true if number, and false if does not contain a number.
+  return /\d/.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
