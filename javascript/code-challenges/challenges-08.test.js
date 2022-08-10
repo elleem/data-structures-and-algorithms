@@ -135,6 +135,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // return a new array containing any cities that begin with the letters A through J, inclusive
+  return arr.filter((e)=>
+    e.match(/^[A-J]/g));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -151,6 +153,7 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  const halloween = input.match()
 };
 
 /* ------------------------------------------------------------------------------------------------
