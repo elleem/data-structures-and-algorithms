@@ -201,8 +201,8 @@ const characters = [
 const countNumberOfChildren = (arr) => {
   // uses reduce to return the total number of children in the data set
   return arr.map(character =>
-    {return character.children ?character.children.length:0}).reduce((acc,val)=>
-    {return acc+val});
+  {return character.children ?character.children.length:0}).reduce((acc,val)=>
+  {return acc+val});
 };
 
 /* ------------------------------------------------------------------------------------------------
