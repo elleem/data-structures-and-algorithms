@@ -9,7 +9,7 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+  // https://dirask.com/posts/JavaScript-find-max-value-in-array-with-Array-reduce-method-BDdeQp
   const max = arr.reduce((a,b)=>Math.min(a,b));
   return max;
 };
@@ -28,6 +28,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
+  return Object.keys(obj); 
 };
 
 /* ------------------------------------------------------------------------------------------------
