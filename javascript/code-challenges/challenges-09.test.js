@@ -40,7 +40,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // Solution code here...
+  // https://stackoverflow.com/questions/53503186/return-boolean-true-value-if-object-contains-true-key-not-return-the-value
   return Object.values(obj).includes(true);
 };
 
@@ -65,6 +65,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  return Object.keys(obj).map((key)=> key +': '+ obj[key]);
 };
 
 
