@@ -42,11 +42,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // https://stackoverflow.com/questions/53503186/return-boolean-true-value-if-object-contains-true-key-not-return-the-value
-  // let valid= Object.keys(obj).map((key)=> {
-  //   return obj[key].includes(value);
-  // });
-  // return valid;
+ return Object.keys(obj).map((key)=>obj[key]).includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
