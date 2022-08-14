@@ -123,6 +123,7 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  arr.forEach((e)=>houses.push(e.house)); 
   return houses;
 };
 
