@@ -123,7 +123,7 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  arr.forEach((e)=>houses.push(e.house)); 
+  arr.forEach((e)=>houses.push(e.house));
   return houses;
 };
 
@@ -140,8 +140,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+  // Object.values to determine if any given character in the data set has children.
+  //take in an array of data and a character name and return a Boolean.
+  let char = arr.filter((val) => Object.values(val).includes(character));
+  if (char[0].children !== undefined) {
+    console.log(char.children);
+    return true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
