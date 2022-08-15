@@ -144,7 +144,6 @@ const hasChildrenValues = (arr, character) => {
   //take in an array of data and a character name and return a Boolean.
   let char = arr.filter((val) => Object.values(val).includes(character));
   if (char[0].children !== undefined) {
-    console.log(char.children);
     return true;
   }
 };
