@@ -29,6 +29,7 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // takes in a matrix of positive numbers and returns the number with the highest value
+  //https://stackoverflow.com/questions/47691738/find-the-max-and-min-element-out-of-all-the-nested-arrays-in-javascript
   const max = Math.max(...[].concat(...matrix));
   return max;
 };
@@ -49,6 +50,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let value = 0;
+  for (let i = 0; i<matrix.length; i++){
+    for (let j = 0; j<matrix[i].length; j++){
+      value += matrix[i][j];
+    }
+  }
+  return value;
 };
 
 
