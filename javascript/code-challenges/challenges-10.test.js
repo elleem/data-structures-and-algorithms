@@ -28,7 +28,9 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  // Solution code here...
+  // takes in a matrix of positive numbers and returns the number with the highest value
+  const max = Math.max(...[].concat(...matrix));
+  return max;
 };
 
 /* ------------------------------------------------------------------------------------------------
