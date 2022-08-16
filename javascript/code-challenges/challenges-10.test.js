@@ -51,8 +51,8 @@ return: 35
 const totalSum = (matrix) => {
   // Solution code here...
   let value = 0;
-  for (let i = 0; i<matrix.length; i++){
-    for (let j = 0; j<matrix[i].length; j++){
+  for (let i = 0; i < matrix.length; i++){
+    for (let j = 0; j < matrix[i].length; j++){
       value += matrix[i][j];
     }
   }
@@ -84,6 +84,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  let result = [];
+  for (let i = 0;i < hoursOpen.length; i++) {
+    let hoursSum = 0;
+    for (let j = 0; j < stores.length; j++) {
+      hoursSum += stores[j][i];
+    }
+    result.push(hoursSum);
+  }
+  return result;
 
 };
 
