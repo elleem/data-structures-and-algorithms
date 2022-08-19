@@ -1,5 +1,7 @@
 'use strict';
 
+const { next } = require("cheerio/lib/api/traversing");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -170,6 +172,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
+  return data.reduce(function(a,b){
+    return parseInt(a.height) < parseInt(b.height) ? a: b;
+  }).name;
 };
 
 /* ------------------------------------------------------------------------------------------------
