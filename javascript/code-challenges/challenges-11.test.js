@@ -20,10 +20,12 @@ Becomes:
 
 function transformToLis(obj){
   // Object.keys to convert to an array, forEach to return the array as is
+  //https://www.javascripttutorial.net/object/convert-an-object-to-an-array-in-javascript/
   let newArr = [];
-  Object.keys(obj).forEach(v=>{
-    newArr.push('<li>'+ v +': ' + obj[v] + '</li>');
-  });
+  Object.keys(obj)
+    .forEach(v=>{
+      newArr.push('<li>'+ v +': ' + obj[v] + '</li>');
+    });
   return newArr;
 }
 
@@ -38,7 +40,15 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  // uses either filter, map, or reduce to count the number of times the i is present
+  let res = 0;
+  for ( let i = 0; i <input.length; i++){
+    let e = input[i];
+    let eFilter = e.filter(val =>
+      val ===target);
+    res +=eFilter.length;
+  }
+  return res;
 };
 
 /* ------------------------------------------------------------------------------------------------
