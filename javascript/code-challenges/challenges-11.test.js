@@ -62,7 +62,7 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  // https://www.delftstack.com/howto/javascript/javascript-sum-of-array/
   let sum = 0;
   for (let i = 0; i <input.length; i++){
     let e =input[i];
@@ -84,7 +84,12 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  // https://www.encodedna.com/javascript/filter-out-only-numbers-in-an-array-using-javascript.htm
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow and https://www.w3schools.com/jsref/jsref_pow.asp
+  return input.map(arr=>{
+    return arr.filter(int=> typeof int === 'number'&& int % 5 ===0)
+      .map(filteredArr => Math.pow(2,filteredArr));
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
