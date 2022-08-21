@@ -42,7 +42,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
- return Object.keys(obj).map((key)=>obj[key]).includes(value);
+  return Object.keys(obj).map((key)=>obj[key]).includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
