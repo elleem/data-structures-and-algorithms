@@ -64,7 +64,7 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  return str.split('').filter((val,i)=> i%2 === 0 ?false: true).join('');
+  return str.split('').filter((val,i)=> i % 2 === 0 ?false: true).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,7 +74,15 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  let result = true;
+  if (arr.length >0){
+    arr.forEach(v=>{
+      newArr.push(v.includes(':)'));
+    })
+    result = !newArr.includes(false);
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
