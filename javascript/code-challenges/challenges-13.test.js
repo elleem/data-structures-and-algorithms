@@ -8,15 +8,15 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
-  let lgth = '';
+  let longest = arr.map(v =>v);
+  longest.sort((a,b)=> a.length - b.length);
   let result = -1;
-  for (let i=0; i< arr.length; i++ ){
-    if (arr[i].length > lgth){
-      lgth = arr[i].length;
-      let longest= arr[i];
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] === longest[longest.length -1]){
+      result = i;
     }
-    return lgth;
-}
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  return arr.map(str => str.charAt(0)); 
+  return arr.map(str => str.charAt(0));
 };
 
 /* ------------------------------------------------------------------------------------------------
