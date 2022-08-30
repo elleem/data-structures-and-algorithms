@@ -79,7 +79,7 @@ const allHappy = (arr) => {
   if (arr.length >0){
     arr.forEach(v=>{
       newArr.push(v.includes(':)'));
-    })
+    }); 
     result = !newArr.includes(false);
   }
   return result;
