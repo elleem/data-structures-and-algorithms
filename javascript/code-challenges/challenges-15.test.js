@@ -1,5 +1,7 @@
 'use strict';
 
+const { is } = require("cheerio/lib/api/traversing");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -98,7 +100,11 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  let luke = arr.find(char=> char.name = 'Luke Skywalker');
+  return arr.filter(char=> parseInt(char.mass)>parseInt(luke.mass)).reduce((str,currVal, i, arr)=>{
+    i === arr.length -1? str += currVal.name: str +=currVal.name + ' - ';
+    return str;
+  }, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +122,7 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  return arr.sort((a,b) => a[property] > b[property]?1:-1);
+  return arr.sort((a,b) => a[property] > b[property] ? 1:-1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -153,7 +159,35 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+ let result = '';
+ if(result ===''){
+  result = helpCheck(board[0][0],board[0][1],board[0][2]);
+ } if (result ===''){
+  result = helpCheck(board[1][0],board[1][1],board[1][2]);
+ } if (result ===''){
+  result = helpCheck(board[2][0],board[2][1],board[2][2]);
+ }if (result ===''){
+  result = helpCheck(board[2][0],board[2][1],board[2][2]);
+ }if (result ===''){
+  result = helpCheck(board[0][0],board[1][0],board[2][0]);
+ }if (result ===''){
+  result = helpCheck(board[0][1],board[1][1],board[2][1]);
+ }if (result ===''){
+  result = helpCheck(board[0][2],board[1][2],board[2][2]);
+ }if (result ===''){
+  result = helpCheck(board[0][0],board[1][1],board[2][2]);
+ }if (result ===''){
+  result = helpCheck(board[0][2],board[1][1],board[2][0]);
+ }
+ return result === 'X' ? true : result ==='O' ? true : false;
+};
+
+const helpCheck = (val1, val2, val3) => {
+  let result = '';
+  if(val1 === val2 && val2 === val3){
+    result = val1;
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
