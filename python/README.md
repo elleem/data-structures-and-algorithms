@@ -2,6 +2,11 @@
 
 ## Language: `Python`
 
+### Table of Contents
+
+-[Code Challenge 1](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_reverse)
+
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
