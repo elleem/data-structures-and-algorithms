@@ -6,6 +6,8 @@
 
 -[Code Challenge 1](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_reverse)
 
+-[Code Challenge 2](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_reverse)
+
 
 ### Folder and Challenge Setup
 
