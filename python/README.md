@@ -8,6 +8,8 @@
 
 -[Code Challenge 2](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_insert_shift)
 
+-[Code Challenge 3](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_binary_searches)
+
 
 ### Folder and Challenge Setup
 
