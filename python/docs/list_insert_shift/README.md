@@ -6,7 +6,7 @@ Without utilizing any of the built-in methods available to your language, return
 
 ### Whiteboard Process
 
-![insert shift list whiteboard]()
+![insert shift list whiteboard](Code-Challenge-02.jpg)
 
 ### Approach and Efficiency
 
