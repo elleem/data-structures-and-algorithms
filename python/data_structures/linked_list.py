@@ -40,3 +40,4 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
 
 class TargetError:
     pass
+#   raise TargetError

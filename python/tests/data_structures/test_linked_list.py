@@ -40,6 +40,13 @@ def test_to_string_single():
 
     assert str(linked_list) == "{ apple } -> NULL"
 
+def test_includes_last_value():
+    linked_list = LinkedList()
+    linked_list.insert("apple")
+    linked_list.insert("banana")
+    linked_list.insert("orange")
+    assert linked_list.includes("orange") == True
+
 
 @pytest.mark.skip("TODO")
 def test_to_string_double():
