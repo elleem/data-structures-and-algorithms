@@ -24,7 +24,7 @@ def test_populated_head():
     assert linked.head.value == "apple"
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_to_string_empty():
     linked_list = LinkedList()
 
