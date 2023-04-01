@@ -40,12 +40,30 @@ def test_to_string_single():
 
     assert str(linked_list) == "{ apple } -> NULL"
 
+
+def test_to_string_multiple():
+    linked_list = LinkedList()
+
+    linked_list.insert("apple")
+    linked_list.insert("banana")
+    linked_list.insert("orange")
+
+    assert str(linked_list) == "{ orange } -> { banana } -> { apple } -> NULL"
+
 def test_includes_last_value():
     linked_list = LinkedList()
     linked_list.insert("apple")
     linked_list.insert("banana")
     linked_list.insert("orange")
     assert linked_list.includes("orange") == True
+
+
+def test_includes_first_value():
+    linked_list = LinkedList()
+    linked_list.insert("apple")
+    linked_list.insert("banana")
+    linked_list.insert("orange")
+    assert linked_list.includes("apple") == True
 
 def test_includes_only_value():
     linked_list = LinkedList()
