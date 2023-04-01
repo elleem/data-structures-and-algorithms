@@ -53,6 +53,10 @@ def test_includes_only_value():
     assert linked_list.includes("apple") == True
 
 
+def test_includes_empty_list():
+    linked_list = LinkedList()
+    assert linked_list.includes("apple") == False
+
 @pytest.mark.skip("TODO")
 def test_to_string_double():
     linked_list = LinkedList()
