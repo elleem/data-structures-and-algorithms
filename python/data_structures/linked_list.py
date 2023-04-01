@@ -12,24 +12,31 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
         self.head = None
 
     def __str__(self):
+        #Returns: a string representing all the values in the Linked List, formatted as: "{a} ->"
         if self.head is None:
             return "NULL"
         current = self.head
-        result = str(current.value)
+        result = f"{{ {current.value} }}"
         while current.next is not None:
             current = current.next
-            result += f" ->{current.value}"
+            result += f" -> {{ {current.value} }}"
+        result += " -> NULL"
         return result
 
     def insert(self, value):
-        if self.head is None:
-            self.head= Node(value)
-        else:
-            current=self.head
-            while current.next is not None:
-                current = current.next
-            current.next = Node(value)
+        new_node = Node(value)
+        new_node.next = self.head
+        self.head = new_node
 
+
+    def includes(self, value):
+        #Indicates whether that value exists as a Node’s value somewhere within the list. returns boolean
+        current = self.head
+        while current is not None:
+            if current.value == value:
+                return True
+            current = current.next
+        return False
 
 class TargetError:
     pass
