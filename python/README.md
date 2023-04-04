@@ -8,7 +8,9 @@
 
 -[Code Challenge 2](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_insert_shift)
 
--[Code Challenge 3](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_binary_searc)
+-[Code Challenge 3](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_binary_search)
+
+-[Code Challenge 5](/./python/data_structures/linked_list.py)
 
 
 ### Folder and Challenge Setup

@@ -15,8 +15,11 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
         #Returns: a string representing all the values in the Linked List, formatted as: "{a} ->"
         if self.head is None:
             return "NULL"
+        #initialize a variable named current, set to head
         current = self.head
+        #this allows you to literally match the format of the test
         result = f"{{ {current.value} }}"
+        #start a while loop, choose b/n current or current.next node
         while current.next is not None:
             current = current.next
             result += f" -> {{ {current.value} }}"
