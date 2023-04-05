@@ -1,6 +1,7 @@
 import pytest
 from data_structures.linked_list import LinkedList, TargetError
 
+# Can successfully add multiple nodes to the end of a linked list
 def test_append_mult_nodes_to_end():
     linked_list = LinkedList()
     linked_list.append(5)
@@ -14,7 +15,7 @@ def test_append_mult_nodes_to_end():
     assert linked_list.head.next.next.next.value == 2
     assert linked_list.head.next.next.next.next is None
 
-
+#Can successfully add a node to the end of the linked list
 def test_append_one():
     linked_list = LinkedList()
     linked_list.append(1)
@@ -36,7 +37,7 @@ def test_append():
     assert str(linked_list) == "{ banana } -> { apple } -> { cucumber } -> NULL"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_insert_before():
     linked_list = LinkedList()
 
@@ -49,7 +50,7 @@ def test_insert_before():
     assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_insert_before_first():
     linked_list = LinkedList()
 
@@ -59,7 +60,8 @@ def test_insert_before_first():
 
     assert str(linked_list) == "{ cucumber } -> { apple } -> NULL"
 
-
+# Can successfully insert a node before a node located i the middle of a linked list
+# Can successfully insert a node before the first node of a linked list
 @pytest.mark.skip("TODO")
 def test_insert_after():
     linked_list = LinkedList()

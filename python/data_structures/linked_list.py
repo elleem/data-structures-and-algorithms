@@ -54,11 +54,22 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
 
             current.next = new_node
 
-        #return self.head
 
-    # def insert_before(self, value, new_value):
-    #adds a new node with the given new value immediately before the first node that has the value specified
-    #     pass
+
+    def insert_before(self, value, new_value):
+    # adds a new node with the given new value immediately before the first node that has the value specified
+        if self.head is not None and self.head.value == value:
+            self.insert(new_value)
+            return
+
+        current = self.head
+    #while the node value is not null and the current next value, doesn't equal the target value, the traverse
+        while current.next is not None and current.next.value != value:
+            current = current.next
+
+        new_node = Node(new_value)
+        new_node.next = current.next
+        current.next= new_node
     #
     # def insert_after(self, value, new_value):
     #adds a new node with the given new value immediately after the first node that has the value specified
