@@ -79,9 +79,15 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
     #
     def insert_after(self, value, new_value):
     # adds a new node with the given new value immediately after the first node that has the value specified
+        if self.head is None:
+            raise TargetError("cannot insert after in an empty list")
+
         current = self.head
         while current is not None and current.value != value:
             current = current.next
+
+        if current is None:
+            raise TargetError(f"Value {value} not found in linked list")
 
         new_node = Node(new_value)
         new_node.next = current.next
