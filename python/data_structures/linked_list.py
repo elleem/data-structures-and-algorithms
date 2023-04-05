@@ -75,9 +75,15 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
         new_node.next = current.next
         current.next= new_node
     #
-    # def insert_after(self, value, new_value):
-    #adds a new node with the given new value immediately after the first node that has the value specified
-    #     pass
+    def insert_after(self, value, new_value):
+    # adds a new node with the given new value immediately after the first node that has the value specified
+        current = self.head
+        while current is not None and current.value != value:
+            current = current.next
+
+        new_node = Node(new_value)
+        new_node.next = current.next
+        current.next = new_node
 
 class TargetError:
     pass

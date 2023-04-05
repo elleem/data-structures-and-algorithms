@@ -113,7 +113,7 @@ def test_insert_before_exception():
     assert linked_list.head.next.value == 3
     assert linked_list.head.next.next.value == 1
     assert linked_list.head.next.next.next is None
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_insert_after():
     linked_list = LinkedList()
 
