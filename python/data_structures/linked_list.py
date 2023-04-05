@@ -41,6 +41,29 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
             current = current.next
         return False
 
+    def append(self, value):
+        #adds a new node with the given value to the end of the list
+        new_node = Node(value)
+        if not self.head:
+            self.head = new_node
+
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+
+            current.next = new_node
+
+        #return self.head
+
+    # def insert_before(self, value, new_value):
+    #adds a new node with the given new value immediately before the first node that has the value specified
+    #     pass
+    #
+    # def insert_after(self, value, new_value):
+    #adds a new node with the given new value immediately after the first node that has the value specified
+    #     pass
+
 class TargetError:
     pass
 #   raise TargetError

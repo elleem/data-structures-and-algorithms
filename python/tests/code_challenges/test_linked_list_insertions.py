@@ -1,8 +1,29 @@
 import pytest
 from data_structures.linked_list import LinkedList, TargetError
 
+def test_append_mult_nodes_to_end():
+    linked_list = LinkedList()
+    linked_list.append(5)
+    linked_list.append(1)
+    linked_list.append(3)
+    linked_list.append(2)
 
-@pytest.mark.skip("TODO")
+    assert linked_list.head.value == 5
+    assert linked_list.head.next.value == 1
+    assert linked_list.head.next.next.value == 3
+    assert linked_list.head.next.next.next.value == 2
+    assert linked_list.head.next.next.next.next is None
+
+
+def test_append_one():
+    linked_list = LinkedList()
+    linked_list.append(1)
+
+
+    assert linked_list.head.value == 1
+    assert linked_list.head.next is None
+
+# @pytest.mark.skip("TODO")
 def test_append():
     linked_list = LinkedList()
 
