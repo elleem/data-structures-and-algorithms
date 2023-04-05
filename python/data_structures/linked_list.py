@@ -58,6 +58,7 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
 
     def insert_before(self, value, new_value):
     # adds a new node with the given new value immediately before the first node that has the value specified
+
         if self.head is not None and self.head.value == value:
             self.insert(new_value)
             return
@@ -66,6 +67,9 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
     #while the node value is not null and the current next value, doesn't equal the target value, the traverse
         while current.next is not None and current.next.value != value:
             current = current.next
+
+        if current.next is None:
+            raise ValueError(f"Value {value} not found in linked list")
 
         new_node = Node(new_value)
         new_node.next = current.next
