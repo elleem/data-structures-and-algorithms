@@ -71,7 +71,7 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
             current = current.next
 
         if current.next is None:
-            raise ValueError(f"Value {value} not found in linked list")
+            raise TargetError(f"Value {value} not found in linked list")
 
         new_node = Node(new_value)
         new_node.next = current.next
@@ -91,5 +91,5 @@ class TargetError (Exception):
     def __int__(self, message):
         self.message = message
 
-        
+
 #   raise TargetError

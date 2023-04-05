@@ -105,7 +105,7 @@ def test_insert_before_exception():
     try:
         linked_list.insert_before(4,5)
         assert False, "Expected ValueError to be raised"
-    except ValueError as e:
+    except TargetError as e:
 
         assert str(e) == "Value 4 not found in linked list"
 
@@ -134,7 +134,7 @@ def test_insert_before_empty():
         linked_list.insert_before("radish", "zucchinni")
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_insert_before_missing():
     linked_list = LinkedList()
 
