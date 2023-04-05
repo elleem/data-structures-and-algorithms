@@ -58,6 +58,8 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
 
     def insert_before(self, value, new_value):
     # adds a new node with the given new value immediately before the first node that has the value specified
+        if self.head is None:
+            raise TargetError("cannot insert before in an empty list")
 
         if self.head is not None and self.head.value == value:
             self.insert(new_value)
@@ -85,6 +87,9 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
         new_node.next = current.next
         current.next = new_node
 
-class TargetError:
-    pass
+class TargetError (Exception):
+    def __int__(self, message):
+        self.message = message
+
+        
 #   raise TargetError
