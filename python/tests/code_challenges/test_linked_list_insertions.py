@@ -51,6 +51,7 @@ def test_insert_before():
 
 
 # @pytest.mark.skip("TODO")
+# this list tests insert before when there is only value in the list
 def test_insert_before_first():
     linked_list = LinkedList()
 
@@ -60,8 +61,38 @@ def test_insert_before_first():
 
     assert str(linked_list) == "{ cucumber } -> { apple } -> NULL"
 
-# Can successfully insert a node before a node located i the middle of a linked list
+# Can successfully insert a node before a node located in the middle of a linked list
+def test_insert_before_middle():
+    linked_list = LinkedList()
+
+    linked_list.insert(1)
+    linked_list.insert(3)
+    linked_list.insert(2)
+
+    linked_list.insert_before(3,5)
+
+    assert linked_list.head.value == 2
+    assert linked_list.head.next.value == 5
+    assert linked_list.head.next.next.value == 3
+    assert linked_list.head.next.next.next.value == 1
+    assert linked_list.head.next.next.next.next is None
+
 # Can successfully insert a node before the first node of a linked list
+
+def test_insert_before_first():
+    linked_list = LinkedList()
+
+    linked_list.insert(1)
+    linked_list.insert(3)
+    linked_list.insert(2)
+
+    linked_list.insert_before(1,5)
+
+    assert linked_list.head.value == 2
+    assert linked_list.head.next.value == 3
+    assert linked_list.head.next.next.value == 5
+    assert linked_list.head.next.next.next.value == 1
+    assert linked_list.head.next.next.next.next is None
 @pytest.mark.skip("TODO")
 def test_insert_after():
     linked_list = LinkedList()
