@@ -79,7 +79,7 @@ def test_insert_before_middle():
 
 # Can successfully insert a node before the first node of a linked list
 
-def test_insert_before_first():
+def test_insert_before_first_integer():
     linked_list = LinkedList()
 
     linked_list.insert(1)
@@ -104,7 +104,7 @@ def test_insert_before_exception():
 
     try:
         linked_list.insert_before(4,5)
-        assert False, "Expected ValueError to be raised"
+        assert False, "Expected TargetError to be raised"
     except TargetError as e:
 
         assert str(e) == "Value 4 not found in linked list"
@@ -160,3 +160,57 @@ def test_insert_after_missing():
 
     with pytest.raises(TargetError):
         linked_list.insert_after("radish", "zucchinni")
+
+# Can successfully insert after a node in the middle of the linked list
+def test_insert_after_middle():
+    linked_list = LinkedList()
+
+    linked_list.insert(1)
+    linked_list.insert(3)
+    linked_list.insert(2)
+
+    linked_list.insert_after(3,5)
+
+    assert linked_list.head.value == 2
+    assert linked_list.head.next.value == 3
+    assert linked_list.head.next.next.value == 5
+    assert linked_list.head.next.next.next.value == 1
+    assert linked_list.head.next.next.next.next is None
+
+# Can successfully insert a node after the last node of the linked list
+
+# @pytest.mark.skip("TODO")
+def test_insert_after_last():
+    linked_list = LinkedList()
+
+    linked_list.insert(1)
+    linked_list.insert(3)
+    linked_list.insert(2)
+
+    linked_list.insert_after(2,5)
+
+    assert linked_list.head.value == 2
+    assert linked_list.head.next.value == 5
+    assert linked_list.head.next.next.value == 3
+    assert linked_list.head.next.next.next.value == 1
+    assert linked_list.head.next.next.next.next is None
+
+
+def test_insert_after_exception():
+    linked_list = LinkedList()
+
+    linked_list.insert(1)
+    linked_list.insert(3)
+    linked_list.insert(2)
+
+    try:
+        linked_list.insert_after(4,5)
+        assert False, "Expected TargetError to be raised"
+    except TargetError as e:
+
+        assert str(e) == "Value 4 not found in linked list"
+
+    assert linked_list.head.value == 2
+    assert linked_list.head.next.value == 3
+    assert linked_list.head.next.next.value == 1
+    assert linked_list.head.next.next.next is None
