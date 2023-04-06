@@ -214,3 +214,59 @@ def test_insert_after_exception():
     assert linked_list.head.next.value == 3
     assert linked_list.head.next.next.value == 1
     assert linked_list.head.next.next.next is None
+
+
+def test_insert_before_and_after():
+
+    linked_list = LinkedList()
+
+    linked_list.append(1)
+    linked_list.append(2)
+    linked_list.append(3)
+    linked_list.append(4)
+
+    linked_list.insert_before(3, 2.5)
+    assert linked_list.head.value == 1
+    assert linked_list.head.next.value == 2
+    assert linked_list.head.next.next.value == 2.5
+    assert linked_list.head.next.next.next.value == 3
+    assert linked_list.head.next.next.next.next.value == 4
+
+    linked_list.insert_before(1, 0)
+    assert linked_list.head.value == 0
+    assert linked_list.head.next.value == 1
+    assert linked_list.head.next.next.value == 2
+    assert linked_list.head.next.next.next.value == 2.5
+    assert linked_list.head.next.next.next.next.value == 3
+    assert linked_list.head.next.next.next.next.next.value == 4
+
+    linked_list.insert_after(2.5, 2.75)
+    assert linked_list.head.value == 0
+    assert linked_list.head.next.value == 1
+    assert linked_list.head.next.next.value == 2
+    assert linked_list.head.next.next.next.value == 2.5
+    assert linked_list.head.next.next.next.next.value == 2.75
+    assert linked_list.head.next.next.next.next.next.value == 3
+    assert linked_list.head.next.next.next.next.next.next.value == 4
+
+    linked_list.insert_after(4, 5)
+    assert linked_list.head.value == 0
+    assert linked_list.head.next.value == 1
+    assert linked_list.head.next.next.value == 2
+    assert linked_list.head.next.next.next.value == 2.5
+    assert linked_list.head.next.next.next.next.value == 2.75
+    assert linked_list.head.next.next.next.next.next.value == 3
+    assert linked_list.head.next.next.next.next.next.next.value == 4
+    assert linked_list.head.next.next.next.next.next.next.next.value == 5
+
+    try:
+        linked_list.insert_before(6, 6.5)
+        assert False, "TargetError not raised for insert_before"
+    except TargetError:
+        pass
+
+    try:
+        linked_list.insert_after(7, 7.5)
+        assert False, "TargetError not raised for insert_after"
+    except TargetError:
+        pass
