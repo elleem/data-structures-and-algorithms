@@ -41,6 +41,61 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
             current = current.next
         return False
 
-class TargetError:
-    pass
+    def append(self, value):
+        #adds a new node with the given value to the end of the list
+        new_node = Node(value)
+        if not self.head:
+            self.head = new_node
+
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+
+            current.next = new_node
+
+
+
+    def insert_before(self, value, new_value):
+    # adds a new node with the given new value immediately before the first node that has the value specified
+        if self.head is None:
+            raise TargetError("cannot insert before in an empty list")
+
+        if self.head is not None and self.head.value == value:
+            self.insert(new_value)
+            return
+
+        current = self.head
+    #while the node value is not null and the current next value, doesn't equal the target value, the traverse
+        while current.next is not None and current.next.value != value:
+            current = current.next
+
+        if current.next is None:
+            raise TargetError(f"Value {value} not found in linked list")
+
+        new_node = Node(new_value)
+        new_node.next = current.next
+        current.next= new_node
+    #
+    def insert_after(self, value, new_value):
+    # adds a new node with the given new value immediately after the first node that has the value specified
+        if self.head is None:
+            raise TargetError("cannot insert after in an empty list")
+
+        current = self.head
+        while current is not None and current.value != value:
+            current = current.next
+
+        if current is None:
+            raise TargetError(f"Value {value} not found in linked list")
+
+        new_node = Node(new_value)
+        new_node.next = current.next
+        current.next = new_node
+
+class TargetError (Exception):
+    def __int__(self, message):
+        self.message = message
+
+
 #   raise TargetError
