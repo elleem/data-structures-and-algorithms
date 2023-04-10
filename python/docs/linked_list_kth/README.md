@@ -1,0 +1,20 @@
+## Linked List: kth value from the end
+
+Write a method to find kth from the end in the Linked List class.
+
+argument: a number, k, as a parameter.
+Return the node’s value that is k places from the tail of the linked list.
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+### Whiteboard Process
+
+![Linked List kth whiteboard](linked-list-kth%20Whiteboard.pdf)
+
+### Approach and Efficiency
+
+Using two pointers, collect the count of the linked list, and then use the second point to move to the kth value after the count is determined.
+O(n) time complexity, O(l) space complexity
+
+### Solution
+
+[Code Challenge Linked List](linked-list-kth%20Whiteboard.pdf)
