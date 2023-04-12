@@ -10,8 +10,11 @@
 
 -[Code Challenge 3](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_binary_search)
 
--[Code Challenge 5](/./python/data_structures/linked_list.py)
+-[Code Challenge 5,6](/./python/data_structures/linked_list.py)
 
+-[Code Challenge 7](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/linked_list_kth)
+
+-[Code Challenge 8]()
 
 ### Folder and Challenge Setup
 
