@@ -93,6 +93,28 @@ create a LinkedList class, include head, upon instantiation an empty LinkedList 
         new_node.next = current.next
         current.next = new_node
 
+
+    def kth_from_end(self, k):
+        if k < 0:
+            raise TargetError("k must be a non-negative integer")
+
+        current = self.head
+        count = 0
+        while current:
+            count += 1
+            current = current.next
+
+        if count == 0:
+            raise TargetError("Cannot get kth element from an empty list")
+
+        if k > count:
+            raise TargetError ("k is greater than or equal to the number of nodes in the linked list")
+
+        current = self.head
+        for i in range(count - k - 1):
+            current = current.next
+
+        return current.value
 class TargetError (Exception):
     def __int__(self, message):
         self.message = message
