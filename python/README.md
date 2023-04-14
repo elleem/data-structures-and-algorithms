@@ -14,7 +14,7 @@
 
 -[Code Challenge 7](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/linked_list_kth)
 
--[Code Challenge 8]()
+-[Code Challenge 8](/./python/code_challenges/linked_list_zip.py)
 
 ### Folder and Challenge Setup
 
