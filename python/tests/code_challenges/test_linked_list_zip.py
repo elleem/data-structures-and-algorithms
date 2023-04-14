@@ -158,4 +158,33 @@ def test_for_a_fun_message():
 
     assert str(actual) == str(expected)
 
+def test_zip_lists_new_list():
+    # create two linked lists with some values
+    a = LinkedList()
+    a.append(1)
+    a.append(3)
+    a.append(5)
+    b = LinkedList()
+    b.append(2)
+    b.append(4)
+    b.append(6)
+
+    # call the zip_lists function and store the result in a new linked list
+    result = zip_lists(a, b)
+
+    # assert that the new linked list has the correct values
+    current = result.head
+    assert current.value == 1
+    current = current.next
+    assert current.value == 2
+    current = current.next
+    assert current.value == 3
+    current = current.next
+    assert current.value == 4
+    current = current.next
+    assert current.value == 5
+    current = current.next
+    assert current.value == 6
+    assert current.next is None
+
 
