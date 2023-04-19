@@ -16,6 +16,10 @@
 
 -[Code Challenge 8](/./python/code_challenges/linked_list_zip.py)
 
+-[Code Challenge 9](/./python/data_structures/queue.py)
+
+-[Code Challenge 9](/./python/data_structures/stack.py)
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
