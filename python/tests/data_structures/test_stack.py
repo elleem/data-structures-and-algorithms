@@ -92,3 +92,23 @@ def test_pop_empty():
         s.pop()
 
     assert str(e.value) == "Method not allowed on empty collection"
+
+
+# the following tests authored by Lauren
+
+def test_peek_singular():
+    s = Stack()
+    s.push("apple")
+    actual = s.peek()
+    expected = "apple"
+    assert actual == expected
+
+
+def test_push_integers():
+    s = Stack()
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    actual = s.top.value
+    expected = 3
+    assert actual == expected
