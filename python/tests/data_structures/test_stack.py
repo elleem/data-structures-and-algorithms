@@ -207,4 +207,44 @@ def test_push_pop_mix():
 
     assert s.is_empty()
 
+def test_none():
+    s = Stack()
+    s.push (None)
+    actual = s.top.value
+    expected = None
+    assert actual == expected
+
+def test_push_pop_random():
+    s = Stack()
+
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    s.push(4)
+
+    # randomly pop elements off the stack
+    popped = []
+    while not s.is_empty():
+        element = s.pop()
+        popped.append(element)
+
+    # check if popped elements are in reverse order
+    expected = [4, 3, 2, 1]
+    assert popped == expected
+
+def test_push_pop_large_number_of_elements():
+    s = Stack()
+    for i in range(100000):
+        s.push(i)
+
+    for i in range(100000):
+        s.pop()
+
+    assert s.is_empty()
+    assert s.top is None
+
+
+
+
+
 

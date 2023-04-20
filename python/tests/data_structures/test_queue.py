@@ -111,3 +111,151 @@ def test_exhausted():
     actual = q.is_empty()
     expected = True
     assert actual == expected
+
+# the following tests authored by Lauren
+
+def test_peek_singular():
+    q = Queue()
+    q.enqueue("apple")
+    actual = q.peek()
+    expected = "apple"
+    assert actual == expected
+
+
+def test_enqueue_integers():
+    q = Queue()
+    q.enqueue(1)
+    q.enqueue(2)
+    q.enqueue(3)
+    actual = q.front.value
+    expected = 1
+    assert actual == expected
+
+def test_enqueue_dequeue_loop():
+    q = Queue()
+
+    # enqueue elements onto the queue
+    q.enqueue(0)
+    q.enqueue(1)
+    q.enqueue(2)
+    q.enqueue(3)
+    q.enqueue(4)
+
+    # dequeue elements off the queue in reverse order
+    actual = q.dequeue()
+    expected = 0
+    assert actual == expected
+
+    actual = q.dequeue()
+    expected = 1
+    assert actual == expected
+
+    actual = q.dequeue()
+    expected = 2
+    assert actual == expected
+
+    actual = q.dequeue()
+    expected = 3
+    assert actual == expected
+
+    actual = q.dequeue()
+    expected = 4
+    assert actual == expected
+
+    # check if queue is empty
+    assert q.is_empty()
+
+def test_enqueue_dequeue_different_data_types():
+    q = Queue()
+    q.enqueue(1)
+    q.enqueue(2.5)
+    q.enqueue("string")
+
+    actual =  q.dequeue()
+    expected = 1
+    assert actual == expected
+
+    actual = q.dequeue()
+    expected = 2.5
+    assert actual == expected
+
+    actual = q.dequeue()
+    expected = "string"
+    assert actual == expected
+
+    assert q.is_empty()
+
+
+def test_enqueue_large_number_of_elements():
+    q = Queue()
+    for i in range(100000):
+        q.enqueue(i)
+    actual = q.rear.value
+    expected = 99999
+    assert actual == expected
+
+
+def test_enqueue_dequeue_same_element():
+    q = Queue()
+    q.enqueue("apple")
+    q.enqueue("banana")
+    actual = q.dequeue()
+    expected = "apple"
+    assert actual == expected
+
+def test_enqueue_dequeue_mix():
+    q = Queue()
+    q.enqueue("apple")
+    q.enqueue(123)
+    q.enqueue([1,2,3])
+    q.enqueue({"name": "Lauren", "status": "student"})
+    actual = q.dequeue()
+    expected = "apple"
+    assert actual ==expected
+    actual = q.dequeue()
+    expected = 123
+    assert actual ==expected
+    actual = q.dequeue()
+    expected = [1,2,3]
+    assert actual ==expected
+    actual = q.dequeue()
+    expected = {"name": "Lauren", "status": "student"}
+    assert actual ==expected
+
+    assert q.is_empty()
+
+def test_none():
+    q = Queue()
+    q.enqueue (None)
+    actual = q.rear.value
+    expected = None
+    assert actual == expected
+
+def test_enqueue_dequeue_random():
+    q = Queue()
+
+    q.enqueue(1)
+    q.enqueue(2)
+    q.enqueue(3)
+    q.enqueue(4)
+
+    # randomly dequeue elements off the stack
+    dequeue = []
+    while not q.is_empty():
+        element = q.dequeue()
+        dequeue.append(element)
+
+    # check if dequeued elements are in reverse order
+    expected = [1,2,3,4]
+    assert dequeue == expected
+
+def test_enqueue_dequeue_large_number_of_elements():
+    q = Queue()
+    for i in range(100000):
+        q.enqueue(i)
+
+    for i in range(100000):
+        q.dequeue()
+
+    assert q.is_empty()
+    assert q.rear is None
