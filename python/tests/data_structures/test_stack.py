@@ -147,3 +147,64 @@ def test_push_pop_loop():
     # check if stack is empty
     assert s.is_empty()
 
+def test_push_pop_different_data_types():
+    s = Stack()
+    s.push(1)
+    s.push(2.5)
+    s.push("string")
+
+    actual = s.pop()
+    expected = "string"
+    assert actual == expected
+
+    actual = s.pop()
+    expected = 2.5
+    assert actual == expected
+
+    actual = s.pop()
+    expected = 1
+    assert actual == expected
+
+    assert s.is_empty()
+
+
+def test_push_large_number_of_elements():
+    s = Stack()
+    for i in range(100000):
+        s.push(i)
+    actual = s.top.value
+    expected = 99999
+    assert actual == expected
+
+def test_push_pop_same_element():
+    s = Stack()
+    s.push ("apple")
+    s.pop()
+    s.push("apple")
+    s.push("banana")
+    actual = s.pop()
+    expected = "banana"
+    assert actual == expected
+
+def test_push_pop_mix():
+    s = Stack()
+    s.push("apple")
+    s.push(123)
+    s.push([1,2,3])
+    s.push({"name": "Lauren", "status": "student"})
+    actual = s.pop()
+    expected = {"name": "Lauren", "status": "student"}
+    assert actual ==expected
+    actual = s.pop()
+    expected = [1,2,3]
+    assert actual ==expected
+    actual = s.pop()
+    expected = 123
+    assert actual ==expected
+    actual = s.pop()
+    expected = "apple"
+    assert actual ==expected
+
+    assert s.is_empty()
+
+
