@@ -112,3 +112,38 @@ def test_push_integers():
     actual = s.top.value
     expected = 3
     assert actual == expected
+
+def test_push_pop_loop():
+    s = Stack()
+
+    # push elements onto the stack
+    s.push(0)
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    s.push(4)
+
+    # pop elements off the stack in reverse order
+    actual = s.pop()
+    expected = 4
+    assert actual == expected
+
+    actual = s.pop()
+    expected = 3
+    assert actual == expected
+
+    actual = s.pop()
+    expected = 2
+    assert actual == expected
+
+    actual = s.pop()
+    expected = 1
+    assert actual == expected
+
+    actual = s.pop()
+    expected = 0
+    assert actual == expected
+
+    # check if stack is empty
+    assert s.is_empty()
+
