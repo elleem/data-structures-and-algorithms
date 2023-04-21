@@ -1,12 +1,13 @@
+from data_structures.linked_list import Node
+
 class Stack:
     """
-    Put docstring here
+    Create a Stack class that has a top property.
     """
-
     def __init__(self):
-        # initialization here
-        pass
+        self.top = None
 
-    def some_method(self):
-        # method body here
-        pass
+    def push(self, value):
+        new_node = Node(value)
+        new_node.next = self.top
+        self.top = new_node
