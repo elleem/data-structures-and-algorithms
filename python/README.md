@@ -20,7 +20,7 @@
 
 -[Code Challenge 9](/./python/data_structures/stack.py)
 
--[Code Challenge 11]
+-[Code Challenge 11](https://github.com/elleem/data-structures-and-algorithms/blob/main/python/docs/stack_queue_pseudo/stack-queue-pseduo.jpg)
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
