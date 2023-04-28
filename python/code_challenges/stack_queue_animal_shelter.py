@@ -15,9 +15,11 @@ class AnimalShelter:
 
     def dequeue(self, pref):
         if pref == "dog":
-            return self.dogs_queue.dequeue()
+            if not self.dogs_queue.is_empty():
+                return self.dogs_queue.dequeue()
         elif pref == "cat":
-            return self.cats_queue.dequeue()
+            if not self.cats_queue.is_empty():
+                return self.cats_queue.dequeue()
 
         return None
 
@@ -25,10 +27,10 @@ class AnimalShelter:
 class Dog:
     def __init__(self, name ="dog"):
         self.name = name
-        self.next = next
+
 
 
 class Cat:
     def __init__(self, name ="cat"):
         self.name = name
-        self.next = next
+
