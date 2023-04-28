@@ -22,7 +22,7 @@
 
 -[Code Challenge 11](https://github.com/elleem/data-structures-and-algorithms/blob/main/python/docs/stack_queue_pseudo/stack-queue-pseduo.jpg)
 
--[Code Challenge 12]()
+-[Code Challenge 12](https://github.com/elleem/data-structures-and-algorithms/blob/main/python/docs/stack_queue_animal_shelter/Stack%20Queue%20Animal%20Shelter.jpg)
 
 
 
