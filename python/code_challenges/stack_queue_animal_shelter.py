@@ -13,13 +13,11 @@ class AnimalShelter:
         if animal.name == "cat":
             self.cats_queue.enqueue(animal)
 
-    def dequeue(self, preference):
-        if preference == "dog":
-            if not self.dogs_queue.is_empty():
-                return self.dogs_queue.dequeue()
-        elif preference == "cat":
-            if not self.cats_queue.is_empty():
-                return self.cats_queue.dequeue()
+    def dequeue(self, pref):
+        if pref == "dog":
+            return self.dogs_queue.dequeue()
+        elif pref == "cat":
+            return self.cats_queue.dequeue()
 
         return None
 
