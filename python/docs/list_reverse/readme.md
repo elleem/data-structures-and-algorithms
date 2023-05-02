@@ -6,7 +6,7 @@ Without utilizing any of the built-in methods available to your language, return
 
 ### Whiteboard Process
 
-![list_revese whiteboard](Code-Challenge-01.jpg)
+![list reverse whiteboard](Code-Challenge-01.jpg)
 
 ### Approach and Efficiency
 

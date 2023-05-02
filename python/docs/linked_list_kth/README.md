@@ -8,7 +8,7 @@ You have access to the Node class and all the properties on the Linked List clas
 
 ### Whiteboard Process
 
-![Linked List kth whiteboard](Whiteboard%20Code%20Challenge%2007.jpg)
+![Linked List kth whiteboard](Whiteboard-Code-Challenge-07.jpg)
 
 ### Approach and Efficiency
 
@@ -17,4 +17,4 @@ O(n) time complexity, O(l) space complexity
 
 ### Solution
 
-[Code Challenge Linked List](Whiteboard%20Code%20Challenge%2007.jpg)
+[Code Challenge Linked List](Whiteboard-Code-Challenge-07.jpg)
