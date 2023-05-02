@@ -4,27 +4,27 @@
 
 ### Table of Contents
 
--[Code Challenge 1](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_reverse)
+-[Code Challenge 1](/docs/list_reverse/Code-Challenge-01.jpg)
 
--[Code Challenge 2](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_insert_shift)
+-[Code Challenge 2](/docs/list_insert_shift/Code-Challenge-02.jpg)
 
--[Code Challenge 3](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/list_binary_search)
+-[Code Challenge 3](/docs/list_binary_search/Code-Challenge-03.jpg)
 
--[Code Challenge 5,6](/./python/data_structures/linked_list.py)
+-[Code Challenge 5,6](/data_structures/linked_list.py)
 
--[Code Challenge 7](https://github.com/elleem/data-structures-and-algorithms/tree/main/python/docs/linked_list_kth)
+-[Code Challenge 7](/docs/linked_list_kth/Whiteboard-Code-Challenge-07.jpg)
 
--[Code Challenge 8](/./python/code_challenges/linked_list_zip.py)
+-[Code Challenge 8](/docs/linked_list_zip/Whiteboard-Code-Challenge-08.jpg)
 
--[Code Challenge 9](/./python/data_structures/queue.py)
+-[Code Challenge 9](/data_structures/queue.py)
 
--[Code Challenge 9](/./python/data_structures/stack.py)
+-[Code Challenge 9](/data_structures/stack.py)
 
--[Code Challenge 11](https://github.com/elleem/data-structures-and-algorithms/blob/main/python/docs/stack_queue_pseudo/stack-queue-pseduo.jpg)
+-[Code Challenge 11](/docs/stack_queue_pseudo/stack-queue-pseduo.jpg)
 
--[Code Challenge 12](https://github.com/elleem/data-structures-and-algorithms/blob/main/python/docs/stack_queue_animal_shelter/Stack%20Queue%20Animal%20Shelter.jpg)
+-[Code Challenge 12](/docs/stack_queue_animal_shelter/Stack-Queue-Animal-Shelter.jpg)
 
--[Code Challenge 13]()
+-[Code Challenge 13](/docs/stack_queue_brackets/stacks-queues-brackets.jpg)
 
 
 

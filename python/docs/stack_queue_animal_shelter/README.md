@@ -10,7 +10,7 @@ accepts pref and returns the cat or dog that matches using FIFO
 
 ### Whiteboard Process
 
-![Stack Queue Animal Shelter](Stack%20Queue%20Animal%20Shelter.jpg)
+![Stack Queue Animal Shelter](Stack-Queue-Animal-Shelter.jpg)
 
 ### Approach and Efficiency
 
@@ -22,4 +22,4 @@ The space is O(n) based on how many animals are added.
 
 ### Solution
 
-[Stack Queue Animal Shelter](Stack%20Queue%20Animal%20Shelter.jpg)
+[Stack Queue Animal Shelter](Stack-Queue-Animal-Shelter.jpg )
