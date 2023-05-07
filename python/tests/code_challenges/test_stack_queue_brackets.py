@@ -63,3 +63,8 @@ def test_mismatched():
     actual = multi_bracket_validation("[}")
     expected = False
     assert actual == expected
+
+def test_string():
+    actual = multi_bracket_validation("[non-bracket text]")
+    expected = False
+    assert actual == expected

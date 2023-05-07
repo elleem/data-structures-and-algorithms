@@ -26,7 +26,9 @@
 
 -[Code Challenge 13](/docs/stack_queue_brackets/stacks-queues-brackets.jpg)
 
+-[Code Challenge 15 Binary Tree](/data_structures/binary_tree.py)
 
+-[Code Challenge 15 Binary Search Tree](/data_structures/binary_search_tree.py)
 
 
 ### Folder and Challenge Setup
