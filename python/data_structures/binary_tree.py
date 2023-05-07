@@ -20,11 +20,15 @@ class BinaryTree:
         self.root = None
 
 
+    #passing in two params, root of the tree to be traversed and an empty list to hold values visited during the traversal
     def pre_order(self, root=None, node=None):
+        #initialize empty list
         if node is None:
             node = []
-        if root is  None:
+        #checks for empty root
+        if root is None:
             root = self.root
+        #add the value of current node to list of nodes visited during traversal
         if root:
             node.append(root.value)
             if root.left:
