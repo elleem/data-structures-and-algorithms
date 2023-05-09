@@ -21,22 +21,21 @@ class BinaryTree:
 
 
     #passing in two params, root of the tree to be traversed and an empty list to hold values visited during the traversal
-    def pre_order(self, root=None, node=None):
-        #initialize empty list
+    def pre_order(self, root = None, node=None):
+        # initialize empty list
         if node is None:
             node = []
-        #checks for empty root
+        # checks for empty root
         if root is None:
             root = self.root
-        #add the value of current node to list of nodes visited during traversal
+        # add the value of current node to list of nodes visited during traversal
         if root:
             node.append(root.value)
             if root.left:
-                self.pre_order(root.left,node)
+                self.pre_order(root.left, node)
             if root.right:
-                self.pre_order(root.right,node)
+                self.pre_order(root.right, node)
         return node
-
 
 
     def in_order(self, root=None, node=None):
