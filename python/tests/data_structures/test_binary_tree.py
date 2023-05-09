@@ -60,6 +60,16 @@ def test_empty_root_pre_order():
 def test_in_order_single_node():
     tree = BinaryTree()
     tree.root = Node(5)
+    assert tree.in_order() == [5]
+
+def test_post_order_single_node():
+    tree = BinaryTree()
+    tree.root = Node(5)
+    assert tree.post_order() == [5]
+
+def test_pre_order_single_node():
+    tree = BinaryTree()
+    tree.root = Node(5)
     assert tree.pre_order() == [5]
 
 

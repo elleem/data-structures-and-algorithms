@@ -16,19 +16,17 @@ class BinarySearchTree(BinaryTree):
 
         current = self.root
 
-        while True:
+        while current:
             if value < current.value:
                 if current.left is None:
                     current.left = Node(value)
                     return
-                else:
-                    current = current.left
+                current = current.left
             else:
                 if current.right is None:
                     current.right = Node(value)
                     return
-                else:
-                    current =current.right
+                current =current.right
 
 
     def contains(self, value):
@@ -40,7 +38,7 @@ class BinarySearchTree(BinaryTree):
         while current is not None:
             if current.value == value:
                 return True
-            elif value < current.value:
+            elif current.value > value:
                 current = current.left
             else:
                 current = current.right
