@@ -30,6 +30,8 @@
 
 -[Code Challenge 15 Binary Search Tree](/data_structures/binary_search_tree.py)
 
+-[Code Challenge 16 Tree Max](/docs/tree_max/Binary_Tree_Max_Value.jpg)
+
 
 ### Folder and Challenge Setup
 
