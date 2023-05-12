@@ -65,3 +65,12 @@ class BinaryTree:
             node.append(root.value)
         return node
 
+    def find_maximum_value(self):
+        max_value = float('-inf')
+        nodes = self.in_order()
+
+        for node_value in nodes:
+            if node_value > max_value:
+                max_value = node_value
+
+        return max_value
