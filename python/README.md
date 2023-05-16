@@ -32,7 +32,7 @@
 
 -[Code Challenge 16 Tree Max](/docs/tree_max/Binary_Tree_Max_Value.jpg)
 
--[Code Challenge 17 Breadth First](/docs/tree_breadth_first/)
+-[Code Challenge 17 Breadth First](/docs/tree_breadth_first/Tree_Breadth_First.jpg)
 
 
 ### Folder and Challenge Setup

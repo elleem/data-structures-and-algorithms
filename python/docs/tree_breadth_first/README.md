@@ -13,11 +13,14 @@ in the order top to bottom, per level, left to right
 
 ### Approach and Efficiency
 
+Find the root, then using a queue for each level traverse the tree.
+Pop each node value into an empty list.
 
 
-The time is
+The time is O(n) based on the number of nodes in the input parameter, the tree.
 
-The space is
+The space is O(n) because we are returning a list of all the values in tree and must store the values in the list.
+
 
 
 ### Solution
