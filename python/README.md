@@ -32,6 +32,8 @@
 
 -[Code Challenge 16 Tree Max](/docs/tree_max/Binary_Tree_Max_Value.jpg)
 
+-[Code Challenge 17 Breadth First](/docs/tree_breadth_first/)
+
 
 ### Folder and Challenge Setup
 
