@@ -2,27 +2,25 @@ from data_structures.binary_tree import BinaryTree
 from data_structures.kary_tree import KaryTree, Node
 
 def fizz_buzz_tree(tree):
-    if not tree.root:
-        return None
+    if tree is None or tree.root is None:
+        return KaryTree()
 
-    def fizz_buzz_helper(node):
-        if node.value % 3 == 0 and node.value % 5 == 0:
-            transformed_value = "FizzBuzz"
-        elif node.value % 3 == 0:
-            transformed_value = "Fizz"
-        elif node.value % 5 == 0:
-            transformed_value = "Buzz"
-        else:
-            transformed_value = str(node.value)
+    new_tree = Node(fizz_buzz_helper(tree.root.value))
 
-        tranformed_node = Node(transformed_value)
-        for child in node.children:
-            transformed_child = fizz_buzz_helper(child)
-            tranformed_node.children.append(transformed_child)
-        return tranformed_node
+    for child in tree.root.children:
+        new_child = fizz_buzz_tree(KaryTree(child))
+        new_tree.children.append(new_child.root)
+
+    return KaryTree(new_tree)
+
+def fizz_buzz_helper(value):
+    if value % 15 == 0:
+        return "FizzBuzz"
+    elif value % 3 == 0:
+        return "Fizz"
+    elif value % 5 == 0:
+        return "Buzz"
+    else:
+        return str(value)
 
 
-    transformed_root = fizz_buzz_helper(tree.root)
-    transformed_tree = KaryTree(transformed_root)
-
-    return transformed_tree
