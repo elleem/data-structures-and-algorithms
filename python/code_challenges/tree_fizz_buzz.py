@@ -2,8 +2,8 @@ from data_structures.binary_tree import BinaryTree
 from data_structures.kary_tree import KaryTree, Node
 
 def fizz_buzz_tree(tree):
-    if tree is None or tree.root is None:
-        return KaryTree()
+    if tree.root is None:
+        return None
 
     new_tree = Node(fizz_buzz_helper(tree.root.value))
 

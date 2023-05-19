@@ -34,7 +34,7 @@
 
 -[Code Challenge 17 Breadth First](/docs/tree_breadth_first/Tree_Breadth_First.jpg)
 
--[Code Challenge 18 Fizz Buzz Tree](/docs/tree_fizz_buzz)
+-[Code Challenge 18 Fizz Buzz Tree](/docs/tree_fizz_buzz/tree-fizz-buzz.jpg)
 
 
 ### Folder and Challenge Setup

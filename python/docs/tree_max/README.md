@@ -1,7 +1,7 @@
 ## Tree Maximum Value
 
 Find the maximum value in a tree.
-Arguements: none
+Arguments: none
 Return: number
 
 ### Whiteboard Process
