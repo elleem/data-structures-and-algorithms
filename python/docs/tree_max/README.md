@@ -23,4 +23,4 @@ because this is solved via a list, the solution stores the full list
 
 ### Solution
 
-[Binary Tree Maximum Value](data_structures/binary_tree.py)
+[Binary Tree Maximum Value](code_challenges/tree_fizz_buzz.py)
