@@ -7,12 +7,13 @@ As it traverses it compares each element to the element before it and inserts it
 
 
 ### Problem Domain
-![Problem Domain](problem_domain.png)
+![Problem Domain](images/problem_domain.png)
 
 ### Input Output
-![Input Output](input_out.png)
+![Input Output](images/input_out.png)
 
 ### Pseudocode
+![Pseudocode](images/pseudocode.png)
 
 ### Visualization
 
