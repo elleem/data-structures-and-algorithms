@@ -29,6 +29,20 @@ As it traverses it compares each element to the element before it and inserts it
 ### Code
 ![Code](images/code.png)
 
+### Step Through
+![Step Through 1](images/step_through_1.png)
+![Step Through 2](images/step_through_2.png)
+
+### Big O
+Insert:
+time: O(n)where the whole input list has to be traversed to be compared
+space: O(n) I am not creating an additional list, I am only sorting through it using the temp value
+
+InsertionSort:
+time:  I am using def insert within InsertionSort, so at least O(n^2), due to the function being called internally
+and the potential input of the input list
+space: O(n) if I have to store and sort the whole list
 
 ### Tests
+![Tests](images/tests.png)
 
