@@ -20,8 +20,9 @@ As it traverses it compares each element to the element before it and inserts it
 ![Visualization](images/visualization_2.png)
 ![Visualization](images/visualization_3.png)
 ![Visualization](images/visualization_4.png)
-![Visualization](images/visualization_6.png)
 ![Visualization](images/visualization_5.png)
+![Visualization](images/visualization_6.png)
+
 
 ### Algorithm
 ![Algorithm](images/algorithm.png)
