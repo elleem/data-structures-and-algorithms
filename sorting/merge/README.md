@@ -137,12 +137,16 @@ def merge(left, right, input_list):
 
 ### Big O
 merge:
-time:
-space:
+
+time: O(n) because n is the total number of elements in the merged lists
+
+space: O(n) because n is the total number of elements in the merged lists, merging is being done in place
 
 merge_sort:
-time:
-space:
+
+time: O(n log n) n is the total number of elements in the input list, accounting for the left and right lists, and the recursive stack
+
+space: O(n) due to recursive call stack
 
 ### Tests/Edge cases
 
