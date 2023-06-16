@@ -133,8 +133,6 @@ def merge(left, right, input_list):
   ```
 
 
-### Step Through
-
 ### Big O
 merge:
 
