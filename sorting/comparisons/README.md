@@ -31,6 +31,8 @@ Output: a list of sorted movie objects.
 
 ### Visualization
 
+![Visualization](images/visualization.png)
+
 ### Algorithm
 
 def for year
@@ -61,12 +63,12 @@ The tests pass and are available at sorting/comparisons/test_movies.py
 
 sort by year
 
-time:  O(n log n) due to lambda function extracting the year and title for each movie in the dictionary, where n is the number of movies.
+time:  O(n log n) due to sorted comparing between the year and title for each movie in the dictionary, where n is the number of movies.
 
-space: O(n) we store all the movies in teh sorted movies to output the resulting list of titles
+space: O(n) we store all the movies in the sorted movies to output the resulting list of titles
 
 sort by title
 
-time:
+time: O(n log n) due sorted, where n is the number of movies.
 
-space:
+space: O(n) we store all the movies in the sorted movies to output the resulting list of titles
