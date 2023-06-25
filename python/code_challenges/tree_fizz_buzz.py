@@ -5,13 +5,13 @@ def fizz_buzz_tree(tree):
     if tree.root is None:
         return None
 
-    new_tree = Node(fizz_buzz_helper(tree.root.value))
+    new_node = Node(fizz_buzz_helper(tree.root.value))
 
     for child in tree.root.children:
         new_child = fizz_buzz_tree(KaryTree(child))
-        new_tree.children.append(new_child.root)
+        new_node.children.append(new_child.root)
 
-    return KaryTree(new_tree)
+    return KaryTree(new_node)
 
 def fizz_buzz_helper(value):
     if value % 15 == 0:
