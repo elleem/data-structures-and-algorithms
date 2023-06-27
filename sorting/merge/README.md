@@ -131,7 +131,9 @@ def merge(left, right, input_list):
         k += 1
 
   ```
+### Step Through
 
+![Step Through](images/step_through.png)
 
 ### Big O
 merge:
