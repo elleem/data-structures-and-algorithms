@@ -36,6 +36,8 @@
 
 -[Code Challenge 18 Fizz Buzz Tree](/docs/tree_fizz_buzz/tree-fizz-buzz.jpg)
 
+-[Code Challenge 31 Hashable Repeated Word](docs/hashtable_repeated_word/hashtable_repeated_word_whiteboard.jpg)
+
 
 ### Folder and Challenge Setup
 
