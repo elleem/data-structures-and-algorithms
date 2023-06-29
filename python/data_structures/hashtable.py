@@ -3,6 +3,7 @@ class Hashtable:
         self.size = size
         self._buckets = [[] for _ in range(self.size)]
 
+
     def set(self, key, value):
         index = self._hash(key)
         bucket = self._buckets[index]
@@ -40,8 +41,4 @@ class Hashtable:
             return sum(ord(char) for char in key) % self.size
         else:
             return hash(key) % self.size
-
-
-
-
 
