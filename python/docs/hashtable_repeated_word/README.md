@@ -17,7 +17,7 @@ Using recursion, iterate through the input tree. Convert the root, then convert 
 
 The time is O(n) because of the potential length of the string, you may have to iterate through the whole string in order to find a match, or the match may not be present.
 
-The space is O(n) because of the potential length of the string, you may have to store the whole string in the dictionary before finding a match, or the match may not be present. 
+The space is O(n) because of the potential length of the string, you may have to store the whole string in the dictionary before finding a match, or the match may not be present.
 
 
 ### Solution
