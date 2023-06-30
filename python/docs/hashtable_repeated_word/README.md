@@ -22,4 +22,4 @@ The space is O(n) because of the potential length of the string, you may have to
 
 ### Solution
 
-[Hashtable Repeated Word](hashtable_repeated_word_whiteboard.jpg)
+[Hashtable Repeated Word](code_challenges/hashtable_repeated_word.py)
