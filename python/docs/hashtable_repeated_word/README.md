@@ -9,7 +9,7 @@ Return: string
 
 ### Whiteboard Process
 
-![Hashtable Repeated Word](hashtable_repeated_word_whiteboard.jpg)
+![Hashtable Repeated Word](hashmap_repeated_word_whiteboard.jpg)
 
 ### Approach and Efficiency
 

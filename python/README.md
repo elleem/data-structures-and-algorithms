@@ -38,7 +38,7 @@
 
 -[Code Challenge 30 Hashtable Implementation](/data_structures/hashtable.py)
 
--[Code Challenge 31 Hashable Repeated Word](docs/hashtable_repeated_word/hashtable_repeated_word_whiteboard.jpg)
+-[Code Challenge 31 Hashable Repeated Word](docs/hashtable_repeated_word/hashmap_repeated_word_whiteboard.jpg)
 
 
 
