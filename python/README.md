@@ -40,7 +40,9 @@
 
 -[Code Challenge 31 Hashable Repeated Word](docs/hashtable_repeated_word/hashmap_repeated_word_whiteboard.jpg)
 
--[Code Challenge 32 Tree Intersection](docs/tree_intersection/tr\)
+-[Code Challenge 32 Tree Intersection](docs/tree_intersection/tree_intersection_whiteboard.jpg)
+
+-[Code Challenge 33 Two Arrays](docs/hashtable_left_join/two_arrays_whiteboard.jpg)
 
 ### Folder and Challenge Setup
 
