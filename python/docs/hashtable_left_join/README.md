@@ -11,7 +11,7 @@ Return: a list
 
 ### Whiteboard Process
 
-![Two Arrays]()
+![Two Arrays](two_arrays_whiteboard.jpg)
 
 ### Approach and Efficiency
 
@@ -23,4 +23,4 @@ The approach stores each integer.
 
 ### Solution
 
-[Hashtable Repeated Word](code_challenges/hashtable_repeated_word.py)
+[Hashtable Repeated Word](code_challenges/hashtable_left_join.py)

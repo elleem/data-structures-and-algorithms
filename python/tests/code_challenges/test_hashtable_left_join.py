@@ -30,11 +30,11 @@ def test_negative_example():
     assert output == expected_output
 
 def test_my_own_example():
-    nums1 = [6,6,6]
-    nums2 = [-6,-6,-6]
+    nums1 = [6,7,8]
+    nums2 = [-6,-7,-8]
 
     output = find_distinct_elements(nums1,nums2)
-    expected_output = [[6,6,6], [-6,-6,-6]]
+    expected_output = [[6,7,8], [-6,-7,-8]]
     assert output == expected_output
 
 def test_nulls():
@@ -73,3 +73,4 @@ def test_uniques():
     output = find_distinct_elements(nums1, nums2)
     expected_output = [[1, 2, 3, 4], [5, 6, 7, 8]]
     assert output == expected_output
+
