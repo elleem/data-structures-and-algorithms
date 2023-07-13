@@ -44,6 +44,8 @@
 
 -[Code Challenge 33 Two Arrays](docs/hashtable_left_join/two_arrays_whiteboard.jpg)
 
+-[Code Challenge 34 Graph Implementation](data_structures/graph.py)
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
