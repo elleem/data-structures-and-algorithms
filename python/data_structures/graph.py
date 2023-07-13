@@ -12,7 +12,7 @@ class Graph:
 
     def add_edge(self, node1, node2, weight=0):
         if node1 not in self.graph or node2 not in self.graph:
-            raise KeyError("Both 'node1' and 'node2' must be present in the graph.")
+            raise KeyError
 
         self.graph[node1].append(Edge(node2, weight))
 
