@@ -46,7 +46,7 @@
 
 -[Code Challenge 34 Graph Implementation](data_structures/graph.py)
 
--[Code Challenge 35 DSA Practice](code_challenges/three_odds.py)
+-[Code Challenge 35 DSA Practice](docs/three_odds/three_odds_whiteboard.jpg)
 
 ### Folder and Challenge Setup
 
