@@ -16,8 +16,10 @@ class Graph:
 
         self.graph[node1].append(Edge(node2, weight))
 
+
     def get_neighbors(self, node):
         return self.graph[node]
+
 
     def get_nodes(self):
         return self.graph.keys()

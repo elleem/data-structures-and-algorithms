@@ -46,6 +46,8 @@
 
 -[Code Challenge 34 Graph Implementation](data_structures/graph.py)
 
+-[Code Challenge 35 DSA Practice](docs/three_odds/three_odds_whiteboard.jpg)
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.

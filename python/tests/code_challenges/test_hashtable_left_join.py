@@ -74,3 +74,9 @@ def test_uniques():
     expected_output = [[1, 2, 3, 4], [5, 6, 7, 8]]
     assert output == expected_output
 
+def test_dupes():
+    nums1 = [6,6,6]
+    nums2 = [-6,-6,-6]
+    output = find_distinct_elements(nums1, nums2)
+    expected_output = [[6], [-6]]
+    assert output == expected_output
