@@ -46,7 +46,12 @@
 
 -[Code Challenge 34 Graph Implementation](data_structures/graph.py)
 
--[Code Challenge 35 DSA Practice](docs/three_odds/three_odds_whiteboard.jpg)
+-[Code Challenge 36 DSA Practice](docs/three_odds/three_odds_whiteboard.jpg)
+
+-[Lab 36 part 1](docs/computational_thinking/lab_36_whiteboard_1.jpg)
+
+-[Lab 36 part 2](docs/computational_thinking/lab_36_whiteboard_2.jpg)
+
 
 ### Folder and Challenge Setup
 
