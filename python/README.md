@@ -52,6 +52,8 @@
 
 -[Lab 36 part 2](docs/computational_thinking/lab_36_whiteboard_2.jpg)
 
+-[Code Challenge 37 Peak Index](docs/peak_index/peak_index_in_a_mountain_list_whiteboard.jpg)
+
 
 ### Folder and Challenge Setup
 
