@@ -54,6 +54,8 @@
 
 -[Code Challenge 37 Peak Index](docs/peak_index/peak_index_in_a_mountain_list_whiteboard.jpg)
 
+-[Code Challenge 38 Construct a BST](docs/construct_BST/construct_BST_whiteboard.jpg)
+
 
 ### Folder and Challenge Setup
 
